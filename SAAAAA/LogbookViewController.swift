@@ -16,6 +16,10 @@ class LogbookViewController: UITableViewController {
 //        tableView.backgroundColor = UIColor.redColor()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func styleView() {
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -23,7 +27,7 @@ class LogbookViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
