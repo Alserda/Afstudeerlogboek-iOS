@@ -16,6 +16,7 @@
 		A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */; };
 		A8F4F8FB1C89C16200CB4723 /* PT_Sans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8F91C89BEAF00CB4723 /* PT_Sans-Bold.ttf */; };
 		A8F4F8FC1C89C16500CB4723 /* PT_Sans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8FA1C89BEAF00CB4723 /* PT_Sans-Regular.ttf */; };
+		A8F4F9001C89D10400CB4723 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8FF1C89D10400CB4723 /* AddPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A8F4F8F91C89BEAF00CB4723 /* PT_Sans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PT_Sans-Bold.ttf"; path = "Resources/Fonts/PT_Sans-Bold.ttf"; sourceTree = "<group>"; };
 		A8F4F8FA1C89BEAF00CB4723 /* PT_Sans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PT_Sans-Regular.ttf"; path = "Resources/Fonts/PT_Sans-Regular.ttf"; sourceTree = "<group>"; };
+		A8F4F8FF1C89D10400CB4723 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				A8F4F8E11C89B07C00CB4723 /* LogbookViewController.swift */,
 				A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */,
 				A8F4F8E31C89B07C00CB4723 /* Main.storyboard */,
+				A8F4F8FF1C89D10400CB4723 /* AddPostViewController.swift */,
 				A8F4F8E81C89B07C00CB4723 /* LaunchScreen.storyboard */,
 				A8F4F8EB1C89B07C00CB4723 /* Info.plist */,
 			);
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F4F8F21C89B12C00CB4723 /* AlbumViewController.swift in Sources */,
+				A8F4F9001C89D10400CB4723 /* AddPostViewController.swift in Sources */,
 				A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */,
 				A8F4F8E21C89B07C00CB4723 /* LogbookViewController.swift in Sources */,
 				A8F4F8E01C89B07C00CB4723 /* AppDelegate.swift in Sources */,

@@ -31,6 +31,10 @@ class LogbookViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
 
 }
 

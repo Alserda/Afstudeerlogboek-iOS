@@ -20,13 +20,13 @@
         <scene sceneID="lux-dj-oHj">
             <objects>
                 <tableViewController id="5K9-en-L1L" customClass="LogbookViewController" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="1" sectionFooterHeight="1" id="e29-Om-rVS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="e29-Om-rVS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="100" id="Iul-M2-ZFZ">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iul-M2-ZFZ" id="2Uf-y5-h2z">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
@@ -89,11 +89,46 @@
                             <outlet property="delegate" destination="5K9-en-L1L" id="59Q-qQ-ryE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SAAA" id="gwH-ib-aQu"/>
+                    <navigationItem key="navigationItem" title="SAAA" id="gwH-ib-aQu">
+                        <barButtonItem key="rightBarButtonItem" image="addButton" width="17" id="rDO-ps-OAc">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="OkD-6l-8Wa" kind="show" identifier="toAddPost" id="Mel-rG-t1X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8r-1r-0hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1752" y="-362"/>
+        </scene>
+        <!--Logboek bijwerken-->
+        <scene sceneID="lMd-85-Acj">
+            <objects>
+                <viewController id="OkD-6l-8Wa" customClass="AddPostViewController" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2R-Vo-KEq"/>
+                        <viewControllerLayoutGuide type="bottom" id="6sQ-TR-nQI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fXe-uF-hjI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Logboek bijwerken" id="Kal-gU-fuk">
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="bwp-sp-Zi4">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="OkD-6l-8Wa" id="hhE-lx-DT7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APK-lq-RZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482" y="-362"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="5RM-TW-ova">
@@ -124,11 +159,11 @@
             </objects>
             <point key="canvasLocation" x="1760" y="303"/>
         </scene>
-        <!--Item-->
+        <!--Foto's-->
         <scene sceneID="vl1-9W-Dr5">
             <objects>
                 <navigationController id="I60-1M-hnE" customClass="NavigationController" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jXf-Wh-StA"/>
+                    <tabBarItem key="tabBarItem" title="Foto's" image="fotosIcon" id="jXf-Wh-StA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ey6-jU-GBP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -142,11 +177,11 @@
             </objects>
             <point key="canvasLocation" x="940" y="303"/>
         </scene>
-        <!--Item-->
+        <!--Logboek-->
         <scene sceneID="1Vg-yc-9Cy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0d0-FZ-dCd" customClass="NavigationController" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bi9-4Q-GJC"/>
+                    <tabBarItem key="tabBarItem" title="Logboek" image="logboekIcon" id="bi9-4Q-GJC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="eEc-W8-jk8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -184,7 +219,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addButton" width="22" height="22"/>
+        <image name="backButton" width="23" height="17"/>
         <image name="disclosure-arrow" width="8" height="13"/>
+        <image name="fotosIcon" width="25" height="25"/>
+        <image name="logboekIcon" width="25" height="18"/>
         <image name="pink-circle" width="12" height="12"/>
     </resources>
 </document>
