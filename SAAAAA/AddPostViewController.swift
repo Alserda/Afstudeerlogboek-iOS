@@ -8,9 +8,11 @@
 
 import UIKit
 
-class AddPostViewController: UIViewController, UITextViewDelegate {
+class AddPostViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var textField: UITextView!
+    @IBOutlet var datepickerContainer: UIView!
+    @IBOutlet var dateField: UITextField!
     let placeholderText: String = "Logboek bericht"
     
     override func viewDidLoad() {
@@ -26,6 +28,10 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         textField.text = placeholderText
         textField.textColor = saaaColor.lighterGrey
         textField.contentInset = UIEdgeInsetsMake(0, -4, 0, 0)
+        
+        dateField.delegate = self
+        dateField.text = NSDate().dayMonthYear()
+        datepickerContainer.hidden = true
     }
     
     @IBAction func backButtonPressed(sender: AnyObject) {
@@ -76,5 +82,38 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         return true
     }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+                print(__FUNCTION__)
+        
+//        UIView.transitionWithView(datepickerContainer, duration: 1, options: .TransitionCurlUp, animations: nil, completion: nil)
+        
+        
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        datepickerContainer.layer.addAnimation(transition, forKey: nil)
+        datepickerContainer.hidden = false
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+                print(__FUNCTION__)
+        let transition = CATransition()
+        transition.duration = 0.3
+        datepickerContainer.layer.addAnimation(transition, forKey: nil)
+        datepickerContainer.hidden = true
+    }
+    
+    
+    
+    
     
 }
+
+
+
+
+
+
+
+
+

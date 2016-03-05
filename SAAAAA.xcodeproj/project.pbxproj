@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A87545AF1C8B0D20000ED78A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545AE1C8B0D20000ED78A /* UIColor.swift */; };
 		A87545B21C8B0DDE000ED78A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B11C8B0DDE000ED78A /* Colors.swift */; };
+		A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B31C8B9E17000ED78A /* NSDate.swift */; };
 		A8F4F8E01C89B07C00CB4723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8DF1C89B07C00CB4723 /* AppDelegate.swift */; };
 		A8F4F8E21C89B07C00CB4723 /* LogbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8E11C89B07C00CB4723 /* LogbookViewController.swift */; };
 		A8F4F8E51C89B07C00CB4723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8E31C89B07C00CB4723 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		A87545AE1C8B0D20000ED78A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extentions/UIColor.swift; sourceTree = "<group>"; };
 		A87545B11C8B0DDE000ED78A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Models/Colors.swift; sourceTree = "<group>"; };
+		A87545B31C8B9E17000ED78A /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		A8F4F8DC1C89B07C00CB4723 /* SAAAAA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAAAAA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F4F8DF1C89B07C00CB4723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8F4F8E11C89B07C00CB4723 /* LogbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				A87545AE1C8B0D20000ED78A /* UIColor.swift */,
+				A87545B31C8B9E17000ED78A /* NSDate.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				A87545B21C8B0DDE000ED78A /* Colors.swift in Sources */,
 				A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */,
 				A8F4F8E21C89B07C00CB4723 /* LogbookViewController.swift in Sources */,
+				A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */,
 				A8F4F8E01C89B07C00CB4723 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
