@@ -24,7 +24,8 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         saveButton.imageEdgeInsets = UIEdgeInsets(top: 3, left: -10, bottom: 0, right: 0)
         textField.delegate = self
         textField.text = placeholderText
-        textField.textColor = UIColor.redColor()
+        textField.textColor = saaaColor.lighterGrey
+        textField.contentInset = UIEdgeInsetsMake(0, -4, 0, 0)
     }
     
     @IBAction func backButtonPressed(sender: AnyObject) {
@@ -38,19 +39,23 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     
     
     func textViewDidChangeSelection(textView: UITextView) {
-        if (textView.text == placeholderText && textView.textColor == UIColor.redColor()) {
+        if (textView.text == placeholderText && textView.textColor == saaaColor.lighterGrey) {
             textView.selectedRange = NSMakeRange(0, 0)
         }
     }
     
+    func textViewDidBeginEditing(textView: UITextView) {
+        textView.selectedRange = NSMakeRange(0, 0)
+    }
+    
     func textViewDidChange(textView: UITextView) {
 
-        if (textView.text.characters.count != 0 && textView.text.substringFromIndex(textView.text.startIndex) == placeholderText && textView.textColor == UIColor.redColor()) {
+        if (textView.text.characters.count != 0 && textView.text.substringFromIndex(textView.text.startIndex) == placeholderText && textView.textColor == saaaColor.lighterGrey) {
             textView.text = textView.text.substringToIndex(textView.text.startIndex)
-            textView.textColor = UIColor.blackColor()
+            textView.textColor = saaaColor.lightGrey
         } else if (textView.text.characters.count == 0) {
             textView.text = placeholderText
-            textView.textColor = UIColor.redColor()
+            textView.textColor = saaaColor.lighterGrey
             textView.selectedRange = NSMakeRange(0, 0)
         }
     }
@@ -58,7 +63,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     func textViewDidEndEditing(textView: UITextView) {
         if (textView.text == "") {
             textView.text = placeholderText
-            textView.textColor = UIColor.redColor()
+            textView.textColor = saaaColor.lighterGrey
         }
         textView.resignFirstResponder()
     }
@@ -66,7 +71,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         if (textView.text.characters.count > 1 && textView.text == placeholderText) {
             textView.text = ""
-            textView.textColor = UIColor.blackColor()
+            textView.textColor = saaaColor.lightGrey
         }
         return true
     }
