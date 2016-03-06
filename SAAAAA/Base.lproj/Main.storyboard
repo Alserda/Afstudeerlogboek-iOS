@@ -296,7 +296,7 @@
                     <connections>
                         <outlet property="altSaveButton" destination="BI7-l6-rF6" id="AlA-JI-cZD"/>
                         <outlet property="altSaveButtonBottomConstraint" destination="g9z-Ho-7T0" id="607-kd-uT4"/>
-                        <outlet property="dateField" destination="Pbx-Qm-d64" id="hy0-gY-5S4"/>
+                        <outlet property="dateLabel" destination="Pbx-Qm-d64" id="0Tu-GW-j3j"/>
                         <outlet property="datePicker" destination="ozo-iS-tEG" id="bQj-BF-oKN"/>
                         <outlet property="datepickerContainer" destination="5Qy-1Z-VZl" id="MSK-Gf-6e2"/>
                         <outlet property="saveButton" destination="5c1-6q-B7O" id="OmL-IZ-NjK"/>

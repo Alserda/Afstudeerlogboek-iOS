@@ -12,7 +12,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var textField: UITextView!
     @IBOutlet var datepickerContainer: UIView!
-    @IBOutlet var dateField: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var textFieldContainerTopConstraint: NSLayoutConstraint!
     @IBOutlet var textFieldContainerBottomConstraint: NSLayoutConstraint!
     @IBOutlet var altSaveButton: UIButton!
@@ -35,13 +35,14 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     
     
     @IBAction func saveButtonPressed(sender: AnyObject) {
-        print(__FUNCTION__)
+        print("Date: \(datePicker.date), text you've written: \(textField.text)")
     }
 
     
     @IBAction func pickedDate(sender: AnyObject) {
         print(datePicker.date)
         print(NSDate().formatDateToDayMonthYear(datePicker.date))
+        dateLabel.text = NSDate().formatDateToDayMonthYear(datePicker.date)
     }
 
     
@@ -54,7 +55,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         textField.textColor = saaaColor.lighterGrey
         textField.contentInset = UIEdgeInsetsMake(0, -4, 0, 0)
         datepickerContainer.hidden = true
-        dateField.text = NSDate().currentDateInDayMonthYear()
+        dateLabel.text = NSDate().currentDateInDayMonthYear()
     }
 
     func textViewDidChangeSelection(textView: UITextView) {
@@ -102,34 +103,40 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     }
     
     func keyboardWillShow(aNotification: NSNotification) {
-        adjustTextFieldConstraints(6, bottom: 110, hidden: false)
+        showResponsiveSizedView()
     }
     
     func keyboardWillHide(aNotification: NSNotification) {
-        adjustTextFieldConstraints(21, bottom: 20, hidden: true)
+        showInitialSizedView()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
         for touch in touches {
-            if touch.view == dateField {
-                print("Show datepicker")
+            if touch.view == dateLabel {
                 changeDatepickerAppearance(0.4, hidden: false)
-                adjustTextFieldConstraints(6, bottom: 110, hidden: false)
-            } else if (touch.view != dateField && datepickerContainer.hidden == false) {
-                print("Hide datepicker container")
+                showResponsiveSizedView()
+            } else if (touch.view != dateLabel && datepickerContainer.hidden == false) {
                 changeDatepickerAppearance(0.2, hidden: true)
-                adjustTextFieldConstraints(21, bottom: 20, hidden: true)
+                showInitialSizedView()
             }
         }
     }
     
-    func adjustTextFieldConstraints(top: CGFloat, bottom: CGFloat, hidden: Bool) {
-        textFieldContainerTopConstraint.constant = top
-        textFieldContainerBottomConstraint.constant = bottom
-        altSaveButton.hidden = hidden
+    func showResponsiveSizedView() {
+        textFieldContainerTopConstraint.constant = 6
+        textFieldContainerBottomConstraint.constant = 110
+        altSaveButton.hidden = false
+        saveButton.hidden = true
     }
     
+    func showInitialSizedView() {
+        textFieldContainerTopConstraint.constant = 21
+        textFieldContainerBottomConstraint.constant = 20
+        altSaveButton.hidden = true
+        saveButton.hidden = false
+    }
+
     func changeDatepickerAppearance(duration: CFTimeInterval, hidden: Bool) {
         let transition = CATransition()
         transition.duration = duration
