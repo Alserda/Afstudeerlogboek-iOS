@@ -149,15 +149,15 @@
                                             <constraint firstAttribute="width" constant="8" id="yZC-4Q-MEl"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4 Maart 2016" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oed-F7-1Gm">
-                                        <rect key="frame" x="463" y="11" width="102" height="22"/>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Maart 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Qm-d64">
+                                        <rect key="frame" x="467" y="11" width="98" height="22"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="O6f-J5-xI0"/>
+                                            <constraint firstAttribute="height" constant="22" id="nme-Ri-IWe"/>
                                         </constraints>
-                                        <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                    </textField>
+                                        <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -165,13 +165,14 @@
                                     <constraint firstAttribute="trailing" secondItem="obD-en-9BR" secondAttribute="trailing" id="6yH-c8-fqb"/>
                                     <constraint firstItem="ykE-BP-4Rb" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="top" constant="12" id="AFX-Qd-6DP"/>
                                     <constraint firstAttribute="height" constant="45" id="C6m-My-Uxm"/>
-                                    <constraint firstItem="oed-F7-1Gm" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="top" constant="11" id="DVM-YV-bYx"/>
                                     <constraint firstItem="ykE-BP-4Rb" firstAttribute="leading" secondItem="V5C-yX-zND" secondAttribute="leading" constant="15" id="GI9-3P-hEu"/>
                                     <constraint firstAttribute="trailing" secondItem="YXI-eo-3MB" secondAttribute="trailing" constant="16" id="Hmd-8p-skb"/>
+                                    <constraint firstItem="YXI-eo-3MB" firstAttribute="leading" secondItem="Pbx-Qm-d64" secondAttribute="trailing" constant="11" id="Td4-zy-oxl"/>
                                     <constraint firstItem="obD-en-9BR" firstAttribute="leading" secondItem="V5C-yX-zND" secondAttribute="leading" id="Wu2-Wz-pBs"/>
+                                    <constraint firstItem="obD-en-9BR" firstAttribute="top" secondItem="Pbx-Qm-d64" secondAttribute="bottom" constant="11" id="XHs-94-6AV"/>
                                     <constraint firstItem="YXI-eo-3MB" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="top" constant="16" id="XgY-0G-u45"/>
                                     <constraint firstAttribute="bottom" secondItem="obD-en-9BR" secondAttribute="bottom" id="mTL-Mh-9Cx"/>
-                                    <constraint firstItem="YXI-eo-3MB" firstAttribute="leading" secondItem="oed-F7-1Gm" secondAttribute="trailing" constant="11" id="tsp-li-bfX"/>
+                                    <constraint firstItem="Pbx-Qm-d64" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="top" constant="11" id="wxi-fp-NB1"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c1-6q-B7O">
@@ -307,7 +308,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="dateField" destination="oed-F7-1Gm" id="qGT-EF-ACm"/>
+                        <outlet property="dateField" destination="Pbx-Qm-d64" id="hy0-gY-5S4"/>
                         <outlet property="datepickerContainer" destination="5Qy-1Z-VZl" id="MSK-Gf-6e2"/>
                         <outlet property="saveButton" destination="5c1-6q-B7O" id="OmL-IZ-NjK"/>
                         <outlet property="textField" destination="vbF-Oh-Kty" id="H6z-eI-Xki"/>

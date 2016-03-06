@@ -8,11 +8,11 @@
 
 import UIKit
 
-class AddPostViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var textField: UITextView!
     @IBOutlet var datepickerContainer: UIView!
-    @IBOutlet var dateField: UITextField!
+    @IBOutlet var dateField: UILabel!
     let placeholderText: String = "Logboek bericht"
     
     override func viewDidLoad() {
@@ -28,11 +28,17 @@ class AddPostViewController: UIViewController, UITextViewDelegate, UITextFieldDe
         textField.text = placeholderText
         textField.textColor = saaaColor.lighterGrey
         textField.contentInset = UIEdgeInsetsMake(0, -4, 0, 0)
-        
-        dateField.delegate = self
-        dateField.text = NSDate().dayMonthYear()
         datepickerContainer.hidden = true
+        
+        let singleFingerTap = UITapGestureRecognizer(target: self, action: "dateFieldClicked:")
+        dateField.addGestureRecognizer(singleFingerTap)
+        dateField.text = NSDate().dayMonthYear()
     }
+    
+    func dateFieldClicked(sender: UIButton) {
+        print(__FUNCTION__)
+    }
+    
     
     @IBAction func backButtonPressed(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
@@ -81,32 +87,6 @@ class AddPostViewController: UIViewController, UITextViewDelegate, UITextFieldDe
         }
         return true
     }
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-                print(__FUNCTION__)
-        
-//        UIView.transitionWithView(datepickerContainer, duration: 1, options: .TransitionCurlUp, animations: nil, completion: nil)
-        
-        
-        
-        let transition = CATransition()
-        transition.duration = 0.5
-        datepickerContainer.layer.addAnimation(transition, forKey: nil)
-        datepickerContainer.hidden = false
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-                print(__FUNCTION__)
-        let transition = CATransition()
-        transition.duration = 0.3
-        datepickerContainer.layer.addAnimation(transition, forKey: nil)
-        datepickerContainer.hidden = true
-    }
-    
-    
-    
-    
-    
 }
 
 
