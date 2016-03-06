@@ -149,10 +149,10 @@
                                             <constraint firstAttribute="width" constant="8" id="yZC-4Q-MEl"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Maart 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Qm-d64">
-                                        <rect key="frame" x="467" y="11" width="98" height="22"/>
+                                    <label opaque="NO" contentMode="left" text="4 Maart 2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Qm-d64">
+                                        <rect key="frame" x="110" y="0.0" width="454.5" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="nme-Ri-IWe"/>
+                                            <constraint firstAttribute="height" constant="44" id="eSG-SA-gSj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="17"/>
                                         <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,18 +161,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="YXI-eo-3MB" firstAttribute="leading" secondItem="Pbx-Qm-d64" secondAttribute="trailing" constant="11" id="00B-Kd-6ae"/>
                                     <constraint firstItem="obD-en-9BR" firstAttribute="top" secondItem="YXI-eo-3MB" secondAttribute="bottom" constant="15" id="5OE-c5-cjI"/>
                                     <constraint firstAttribute="trailing" secondItem="obD-en-9BR" secondAttribute="trailing" id="6yH-c8-fqb"/>
                                     <constraint firstItem="ykE-BP-4Rb" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="top" constant="12" id="AFX-Qd-6DP"/>
                                     <constraint firstAttribute="height" constant="45" id="C6m-My-Uxm"/>
                                     <constraint firstItem="ykE-BP-4Rb" firstAttribute="leading" secondItem="V5C-yX-zND" secondAttribute="leading" constant="15" id="GI9-3P-hEu"/>
                                     <constraint firstAttribute="trailing" secondItem="YXI-eo-3MB" secondAttribute="trailing" constant="16" id="Hmd-8p-skb"/>
-                                    <constraint firstItem="YXI-eo-3MB" firstAttribute="leading" secondItem="Pbx-Qm-d64" secondAttribute="trailing" constant="11" id="Td4-zy-oxl"/>
+                                    <constraint firstItem="Pbx-Qm-d64" firstAttribute="leading" secondItem="ykE-BP-4Rb" secondAttribute="trailing" constant="50" id="PvU-8N-alG"/>
+                                    <constraint firstItem="obD-en-9BR" firstAttribute="top" secondItem="Pbx-Qm-d64" secondAttribute="bottom" id="SHB-SL-ypl"/>
                                     <constraint firstItem="obD-en-9BR" firstAttribute="leading" secondItem="V5C-yX-zND" secondAttribute="leading" id="Wu2-Wz-pBs"/>
-                                    <constraint firstItem="obD-en-9BR" firstAttribute="top" secondItem="Pbx-Qm-d64" secondAttribute="bottom" constant="11" id="XHs-94-6AV"/>
                                     <constraint firstItem="YXI-eo-3MB" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="top" constant="16" id="XgY-0G-u45"/>
                                     <constraint firstAttribute="bottom" secondItem="obD-en-9BR" secondAttribute="bottom" id="mTL-Mh-9Cx"/>
-                                    <constraint firstItem="Pbx-Qm-d64" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="top" constant="11" id="wxi-fp-NB1"/>
+                                    <constraint firstItem="Pbx-Qm-d64" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="top" id="qTA-iO-ZbK"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c1-6q-B7O">
@@ -193,7 +194,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WS3-ew-rDp" userLabel="topBorder">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
@@ -312,6 +313,7 @@
                         <outlet property="datepickerContainer" destination="5Qy-1Z-VZl" id="MSK-Gf-6e2"/>
                         <outlet property="saveButton" destination="5c1-6q-B7O" id="OmL-IZ-NjK"/>
                         <outlet property="textField" destination="vbF-Oh-Kty" id="H6z-eI-Xki"/>
+                        <outlet property="textFieldContainerBottomConstraint" destination="DYH-Sk-NfP" id="jom-oC-gQH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APK-lq-RZK" userLabel="First Responder" sceneMemberID="firstResponder"/>

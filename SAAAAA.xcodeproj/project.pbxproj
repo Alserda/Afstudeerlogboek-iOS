@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A807F40E1C8C85DF00BB832A /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F40D1C8C85DF00BB832A /* DeviceSize.swift */; };
+		A81748451C8C7B3A00F231EF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81748441C8C7B3A00F231EF /* UIView.swift */; };
+		A81748471C8C7B4600F231EF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81748461C8C7B4600F231EF /* UIViewController.swift */; };
 		A87545AF1C8B0D20000ED78A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545AE1C8B0D20000ED78A /* UIColor.swift */; };
 		A87545B21C8B0DDE000ED78A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B11C8B0DDE000ED78A /* Colors.swift */; };
 		A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B31C8B9E17000ED78A /* NSDate.swift */; };
@@ -23,9 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A807F40D1C8C85DF00BB832A /* DeviceSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceSize.swift; path = Models/DeviceSize.swift; sourceTree = "<group>"; };
+		A81748441C8C7B3A00F231EF /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Extentions/UIView.swift; sourceTree = "<group>"; };
+		A81748461C8C7B4600F231EF /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extentions/UIViewController.swift; sourceTree = "<group>"; };
 		A87545AE1C8B0D20000ED78A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extentions/UIColor.swift; sourceTree = "<group>"; };
 		A87545B11C8B0DDE000ED78A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Models/Colors.swift; sourceTree = "<group>"; };
-		A87545B31C8B9E17000ED78A /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
+		A87545B31C8B9E17000ED78A /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDate.swift; path = Extentions/NSDate.swift; sourceTree = "<group>"; };
 		A8F4F8DC1C89B07C00CB4723 /* SAAAAA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAAAAA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F4F8DF1C89B07C00CB4723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8F4F8E11C89B07C00CB4723 /* LogbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 			children = (
 				A87545AE1C8B0D20000ED78A /* UIColor.swift */,
 				A87545B31C8B9E17000ED78A /* NSDate.swift */,
+				A81748441C8C7B3A00F231EF /* UIView.swift */,
+				A81748461C8C7B4600F231EF /* UIViewController.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -64,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				A87545B11C8B0DDE000ED78A /* Colors.swift */,
+				A807F40D1C8C85DF00BB832A /* DeviceSize.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -196,11 +205,14 @@
 			files = (
 				A8F4F8F21C89B12C00CB4723 /* AlbumViewController.swift in Sources */,
 				A87545AF1C8B0D20000ED78A /* UIColor.swift in Sources */,
+				A807F40E1C8C85DF00BB832A /* DeviceSize.swift in Sources */,
 				A8F4F9001C89D10400CB4723 /* AddPostViewController.swift in Sources */,
 				A87545B21C8B0DDE000ED78A /* Colors.swift in Sources */,
+				A81748471C8C7B4600F231EF /* UIViewController.swift in Sources */,
 				A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */,
 				A8F4F8E21C89B07C00CB4723 /* LogbookViewController.swift in Sources */,
 				A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */,
+				A81748451C8C7B3A00F231EF /* UIView.swift in Sources */,
 				A8F4F8E01C89B07C00CB4723 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

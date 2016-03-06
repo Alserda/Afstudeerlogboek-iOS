@@ -13,13 +13,38 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var textField: UITextView!
     @IBOutlet var datepickerContainer: UIView!
     @IBOutlet var dateField: UILabel!
+    @IBOutlet var textFieldContainerBottomConstraint: NSLayoutConstraint!
     let placeholderText: String = "Logboek bericht"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         styleApplication()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        if deviceSize.IS_IPHONE_5 {
+            print("iphone 5")
+        } else if deviceSize.IS_IPHONE_6 {
+            print("iphone 6")
+        } else if deviceSize.IS_IPHONE_4_OR_LESS {
+            print("iphone 4 or less")
+        } else {
+            print("iphone 6+")
+        }
     }
+    
+    func keyboardWillShow(aNotification: NSNotification) {
+        let keyboardSize = (aNotification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue().height
+        textFieldContainerBottomConstraint.constant = 125
+    }
+    
+    func keyboardWillHide(aNotification: NSNotification) {
+        textFieldContainerBottomConstraint.constant = 20
+    }
+    
+    
     
     func styleApplication() {
         saveButton.layer.cornerRadius = 3
@@ -29,27 +54,15 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         textField.textColor = saaaColor.lighterGrey
         textField.contentInset = UIEdgeInsetsMake(0, -4, 0, 0)
         datepickerContainer.hidden = true
-        
-        let singleFingerTap = UITapGestureRecognizer(target: self, action: "dateFieldClicked:")
-        dateField.addGestureRecognizer(singleFingerTap)
         dateField.text = NSDate().dayMonthYear()
+        
+        print(textField.frame.size)
     }
-    
-    func dateFieldClicked(sender: UIButton) {
-        print(__FUNCTION__)
-    }
-    
     
     @IBAction func backButtonPressed(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+
     func textViewDidChangeSelection(textView: UITextView) {
         if (textView.text == placeholderText && textView.textColor == saaaColor.lighterGrey) {
             textView.selectedRange = NSMakeRange(0, 0)
@@ -58,7 +71,17 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidBeginEditing(textView: UITextView) {
         textView.selectedRange = NSMakeRange(0, 0)
+        print(__FUNCTION__)
+        
+        if (datepickerContainer.hidden == false) {
+            let transition = CATransition()
+            transition.duration = 0.3
+            datepickerContainer.layer.addAnimation(transition, forKey: nil)
+            datepickerContainer.hidden = true
+        }
     }
+    
+
     
     func textViewDidChange(textView: UITextView) {
 
@@ -73,6 +96,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidEndEditing(textView: UITextView) {
+        print(__FUNCTION__)
         if (textView.text == "") {
             textView.text = placeholderText
             textView.textColor = saaaColor.lighterGrey
@@ -86,6 +110,26 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
             textView.textColor = saaaColor.lightGrey
         }
         return true
+    }
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+        for touch in touches {
+            if touch.view == dateField {
+                print("Show datepicker")
+                let transition = CATransition()
+                transition.duration = 0.4
+                datepickerContainer.layer.addAnimation(transition, forKey: nil)
+                datepickerContainer.hidden = false
+            } else if (touch.view != dateField && datepickerContainer.hidden == false) {
+                print("Hide datepicker container")
+                let transition = CATransition()
+                transition.duration = 0.2
+                datepickerContainer.layer.addAnimation(transition, forKey: nil)
+                datepickerContainer.hidden = true
+            }
+        }
     }
 }
 
