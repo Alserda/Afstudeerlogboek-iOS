@@ -9,9 +9,17 @@
 import Foundation
 
 extension NSDate {
-    func dayMonthYear() -> (String) {
+    func currentDateInDayMonthYear() -> (String) {
         let components = NSCalendar.currentCalendar().components([.Day, .Month, .Year], fromDate: self)
         let monthName = NSDateFormatter().monthSymbols[components.month - 1]
         return "\(String(components.day)) \(monthName) \(String(components.year))"
+    }
+    
+    func formatDateToDayMonthYear(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "d LLLL yyyy"
+        
+        return dateFormatter.stringFromDate(date)
+        
     }
 }

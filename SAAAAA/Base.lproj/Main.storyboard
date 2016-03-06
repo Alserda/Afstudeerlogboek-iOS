@@ -250,6 +250,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="18"/>
                                                 <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="datePickerPressedCancel:" destination="OkD-6l-8Wa" eventType="touchUpInside" id="CKC-p9-X6w"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-ad-3IR">
                                                 <rect key="frame" x="552" y="5" width="30" height="30"/>
@@ -258,6 +261,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="18"/>
                                                 <state key="normal" title="OK"/>
+                                                <connections>
+                                                    <action selector="datePickerPressedOK:" destination="OkD-6l-8Wa" eventType="touchUpInside" id="dse-i6-btX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.16470588235294117" green="0.48627450980392156" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
@@ -328,6 +334,7 @@
                     <connections>
                         <outlet property="altSaveButton" destination="BI7-l6-rF6" id="AlA-JI-cZD"/>
                         <outlet property="dateField" destination="Pbx-Qm-d64" id="hy0-gY-5S4"/>
+                        <outlet property="datePicker" destination="ozo-iS-tEG" id="bQj-BF-oKN"/>
                         <outlet property="datepickerContainer" destination="5Qy-1Z-VZl" id="MSK-Gf-6e2"/>
                         <outlet property="saveButton" destination="5c1-6q-B7O" id="OmL-IZ-NjK"/>
                         <outlet property="textField" destination="vbF-Oh-Kty" id="H6z-eI-Xki"/>

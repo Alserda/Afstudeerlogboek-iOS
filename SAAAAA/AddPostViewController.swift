@@ -16,6 +16,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var textFieldContainerTopConstraint: NSLayoutConstraint!
     @IBOutlet var textFieldContainerBottomConstraint: NSLayoutConstraint!
     @IBOutlet var altSaveButton: UIButton!
+    @IBOutlet var datePicker: UIDatePicker!
     let placeholderText: String = "Logboek bericht"
     
     override func viewDidLoad() {
@@ -36,6 +37,15 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         print(__FUNCTION__)
     }
     
+    @IBAction func datePickerPressedOK(sender: AnyObject) {
+        print(datePicker.date)
+        print(NSDate().formatDateToDayMonthYear(datePicker.date))
+    }
+    
+    
+    @IBAction func datePickerPressedCancel(sender: AnyObject) {
+    }
+    
     func styleApplication() {
         altSaveButton.layer.cornerRadius = 3
         saveButton.layer.cornerRadius = 3
@@ -45,7 +55,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         textField.textColor = saaaColor.lighterGrey
         textField.contentInset = UIEdgeInsetsMake(0, -4, 0, 0)
         datepickerContainer.hidden = true
-        dateField.text = NSDate().dayMonthYear()
+        dateField.text = NSDate().currentDateInDayMonthYear()
     }
 
     func textViewDidChangeSelection(textView: UITextView) {
