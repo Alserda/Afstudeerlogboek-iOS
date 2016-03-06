@@ -13,7 +13,9 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var textField: UITextView!
     @IBOutlet var datepickerContainer: UIView!
     @IBOutlet var dateField: UILabel!
+    @IBOutlet var textFieldContainerTopConstraint: NSLayoutConstraint!
     @IBOutlet var textFieldContainerBottomConstraint: NSLayoutConstraint!
+    @IBOutlet var altSaveButton: UIButton!
     let placeholderText: String = "Logboek bericht"
     
     override func viewDidLoad() {
@@ -23,30 +25,19 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        
-        if deviceSize.IS_IPHONE_5 {
-            print("iphone 5")
-        } else if deviceSize.IS_IPHONE_6 {
-            print("iphone 6")
-        } else if deviceSize.IS_IPHONE_4_OR_LESS {
-            print("iphone 4 or less")
-        } else {
-            print("iphone 6+")
-        }
     }
     
-    func keyboardWillShow(aNotification: NSNotification) {
-        let keyboardSize = (aNotification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue().height
-        textFieldContainerBottomConstraint.constant = 125
-    }
-    
-    func keyboardWillHide(aNotification: NSNotification) {
-        textFieldContainerBottomConstraint.constant = 20
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
     }
     
     
+    @IBAction func saveButtonPressed(sender: AnyObject) {
+        print(__FUNCTION__)
+    }
     
     func styleApplication() {
+        altSaveButton.layer.cornerRadius = 3
         saveButton.layer.cornerRadius = 3
         saveButton.imageEdgeInsets = UIEdgeInsets(top: 3, left: -10, bottom: 0, right: 0)
         textField.delegate = self
@@ -55,12 +46,6 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         textField.contentInset = UIEdgeInsetsMake(0, -4, 0, 0)
         datepickerContainer.hidden = true
         dateField.text = NSDate().dayMonthYear()
-        
-        print(textField.frame.size)
-    }
-    
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
     }
 
     func textViewDidChangeSelection(textView: UITextView) {
@@ -71,7 +56,6 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidBeginEditing(textView: UITextView) {
         textView.selectedRange = NSMakeRange(0, 0)
-        print(__FUNCTION__)
         
         if (datepickerContainer.hidden == false) {
             let transition = CATransition()
@@ -81,10 +65,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-
-    
     func textViewDidChange(textView: UITextView) {
-
         if (textView.text.characters.count != 0 && textView.text.substringFromIndex(textView.text.startIndex) == placeholderText && textView.textColor == saaaColor.lighterGrey) {
             textView.text = textView.text.substringToIndex(textView.text.startIndex)
             textView.textColor = saaaColor.lightGrey
@@ -96,7 +77,6 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidEndEditing(textView: UITextView) {
-        print(__FUNCTION__)
         if (textView.text == "") {
             textView.text = placeholderText
             textView.textColor = saaaColor.lighterGrey
@@ -112,6 +92,17 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         return true
     }
     
+    func keyboardWillShow(aNotification: NSNotification) {
+        textFieldContainerTopConstraint.constant = 6
+        textFieldContainerBottomConstraint.constant = 110
+        altSaveButton.hidden = false
+    }
+    
+    func keyboardWillHide(aNotification: NSNotification) {
+        textFieldContainerTopConstraint.constant = 21
+        textFieldContainerBottomConstraint.constant = 20
+        altSaveButton.hidden = true
+    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)

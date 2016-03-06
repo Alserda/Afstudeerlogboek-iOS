@@ -185,6 +185,9 @@
                                 <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="17"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Opslaan" image="checkArrow"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="OkD-6l-8Wa" eventType="touchUpInside" id="Fqc-mM-uB9"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXv-sb-bJk" userLabel="Logboek Container">
                                 <rect key="frame" x="0.0" y="130" width="600" height="339"/>
@@ -280,6 +283,18 @@
                                     <constraint firstItem="Lno-Ql-uuI" firstAttribute="top" secondItem="5Qy-1Z-VZl" secondAttribute="top" id="wyH-zA-8Fw"/>
                                 </constraints>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI7-l6-rF6" userLabel="Alt Save Button">
+                                <rect key="frame" x="549" y="336" width="42" height="42"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.14117647059999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="ENK-ei-CQD"/>
+                                    <constraint firstAttribute="height" constant="42" id="MjP-ob-R0O"/>
+                                </constraints>
+                                <state key="normal" image="checkArrow"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="OkD-6l-8Wa" eventType="touchUpInside" id="UAU-NP-lje"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -294,7 +309,9 @@
                             <constraint firstItem="V5C-yX-zND" firstAttribute="top" secondItem="fXe-uF-hjI" secondAttribute="top" constant="64" id="Mqj-Xf-149"/>
                             <constraint firstItem="V5C-yX-zND" firstAttribute="leading" secondItem="fXe-uF-hjI" secondAttribute="leadingMargin" constant="-20" id="b8S-jZ-Kle"/>
                             <constraint firstItem="5Qy-1Z-VZl" firstAttribute="leading" secondItem="fXe-uF-hjI" secondAttribute="leadingMargin" constant="-20" id="cQl-VH-tjl"/>
+                            <constraint firstItem="BI7-l6-rF6" firstAttribute="bottom" secondItem="fXe-uF-hjI" secondAttribute="bottom" constant="-222" id="g9z-Ho-7T0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5c1-6q-B7O" secondAttribute="trailing" constant="-10" id="mmn-Pp-RTt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BI7-l6-rF6" secondAttribute="trailing" constant="-11" id="tIh-bK-K5t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Qy-1Z-VZl" secondAttribute="trailing" constant="-20" id="y5f-fF-NIf"/>
                         </constraints>
                     </view>
@@ -309,11 +326,13 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="altSaveButton" destination="BI7-l6-rF6" id="AlA-JI-cZD"/>
                         <outlet property="dateField" destination="Pbx-Qm-d64" id="hy0-gY-5S4"/>
                         <outlet property="datepickerContainer" destination="5Qy-1Z-VZl" id="MSK-Gf-6e2"/>
                         <outlet property="saveButton" destination="5c1-6q-B7O" id="OmL-IZ-NjK"/>
                         <outlet property="textField" destination="vbF-Oh-Kty" id="H6z-eI-Xki"/>
                         <outlet property="textFieldContainerBottomConstraint" destination="DYH-Sk-NfP" id="jom-oC-gQH"/>
+                        <outlet property="textFieldContainerTopConstraint" destination="Isg-9T-MQt" id="hzJ-ri-cZj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APK-lq-RZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
