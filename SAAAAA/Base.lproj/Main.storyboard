@@ -8,8 +8,6 @@
     <customFonts key="customFonts">
         <mutableArray key="PT_Sans-Bold.ttf">
             <string>PTSans-Bold</string>
-            <string>PTSans-Bold</string>
-            <string>PTSans-Bold</string>
         </mutableArray>
         <mutableArray key="PT_Sans-Regular.ttf">
             <string>PTSans-Regular</string>
@@ -228,65 +226,29 @@
                                     <constraint firstItem="WS3-ew-rDp" firstAttribute="leading" secondItem="LXv-sb-bJk" secondAttribute="leading" id="yQG-gK-jEJ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qy-1Z-VZl" userLabel="Datepicker Container">
-                                <rect key="frame" x="0.0" y="370" width="600" height="186"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qy-1Z-VZl" userLabel="Datepicker Container">
+                                <rect key="frame" x="0.0" y="390" width="600" height="166"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ozo-iS-tEG">
-                                        <rect key="frame" x="0.0" y="31" width="600" height="162"/>
+                                        <rect key="frame" x="0.0" y="-27" width="600" height="216"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="162" id="cGD-Hr-ZLp"/>
+                                            <constraint firstAttribute="height" constant="216" id="Hxb-XD-3bp"/>
                                         </constraints>
                                         <date key="date" timeIntervalSinceReferenceDate="478898229.62891197">
                                             <!--2016-03-05 19:17:09 +0000-->
                                         </date>
+                                        <connections>
+                                            <action selector="pickedDate:" destination="OkD-6l-8Wa" eventType="valueChanged" id="dV9-is-V2c"/>
+                                        </connections>
                                     </datePicker>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lno-Ql-uuI" userLabel="Toolbar Container">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI4-Jr-ren">
-                                                <rect key="frame" x="18" y="5" width="51" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="ers-P5-8Dl"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="18"/>
-                                                <state key="normal" title="Cancel"/>
-                                                <connections>
-                                                    <action selector="datePickerPressedCancel:" destination="OkD-6l-8Wa" eventType="touchUpInside" id="CKC-p9-X6w"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-ad-3IR">
-                                                <rect key="frame" x="552" y="5" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="bPr-Wh-Ak9"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="18"/>
-                                                <state key="normal" title="OK"/>
-                                                <connections>
-                                                    <action selector="datePickerPressedOK:" destination="OkD-6l-8Wa" eventType="touchUpInside" id="dse-i6-btX"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.16470588235294117" green="0.48627450980392156" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Nwb-41-g2t"/>
-                                            <constraint firstItem="OI4-Jr-ren" firstAttribute="leading" secondItem="Lno-Ql-uuI" secondAttribute="leading" constant="18" id="T7T-09-Lqe"/>
-                                            <constraint firstItem="OI4-Jr-ren" firstAttribute="top" secondItem="Lno-Ql-uuI" secondAttribute="top" constant="5" id="XHS-Ga-qWd"/>
-                                            <constraint firstItem="vWg-ad-3IR" firstAttribute="top" secondItem="Lno-Ql-uuI" secondAttribute="top" constant="5" id="cnI-38-nYh"/>
-                                            <constraint firstAttribute="trailing" secondItem="vWg-ad-3IR" secondAttribute="trailing" constant="18" id="eKA-FR-6Go"/>
-                                            <constraint firstAttribute="bottom" secondItem="OI4-Jr-ren" secondAttribute="bottom" constant="5" id="lzT-0k-JQE"/>
-                                            <constraint firstAttribute="bottom" secondItem="vWg-ad-3IR" secondAttribute="bottom" constant="5" id="qgM-jP-3WD"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ozo-iS-tEG" secondAttribute="trailing" id="Des-Vd-upP"/>
-                                    <constraint firstItem="Lno-Ql-uuI" firstAttribute="leading" secondItem="5Qy-1Z-VZl" secondAttribute="leading" id="GZc-PB-qXG"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lno-Ql-uuI" secondAttribute="trailing" id="HZc-AI-H25"/>
-                                    <constraint firstAttribute="bottom" secondItem="ozo-iS-tEG" secondAttribute="bottom" constant="-7" id="Iwk-MA-SYd"/>
-                                    <constraint firstItem="ozo-iS-tEG" firstAttribute="leading" secondItem="5Qy-1Z-VZl" secondAttribute="leading" id="lsB-uR-v1I"/>
-                                    <constraint firstAttribute="height" constant="186" id="tST-yj-nfT"/>
-                                    <constraint firstItem="Lno-Ql-uuI" firstAttribute="top" secondItem="5Qy-1Z-VZl" secondAttribute="top" id="wyH-zA-8Fw"/>
+                                    <constraint firstAttribute="bottom" secondItem="ozo-iS-tEG" secondAttribute="bottom" constant="-23" id="68e-VZ-pee"/>
+                                    <constraint firstAttribute="trailing" secondItem="ozo-iS-tEG" secondAttribute="trailing" id="6FH-HO-zih"/>
+                                    <constraint firstAttribute="height" constant="166" id="Ngz-an-mfd"/>
+                                    <constraint firstItem="ozo-iS-tEG" firstAttribute="leading" secondItem="5Qy-1Z-VZl" secondAttribute="leading" id="fqG-iC-lsF"/>
+                                    <constraint firstItem="ozo-iS-tEG" firstAttribute="top" secondItem="5Qy-1Z-VZl" secondAttribute="top" constant="-27" id="gsz-bK-pUw"/>
                                 </constraints>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI7-l6-rF6" userLabel="Alt Save Button">
@@ -305,20 +267,20 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="V5C-yX-zND" secondAttribute="trailing" constant="-20" id="0D6-kz-Xlm"/>
+                            <constraint firstItem="6sQ-TR-nQI" firstAttribute="top" secondItem="5Qy-1Z-VZl" secondAttribute="bottom" id="29z-CB-zKx"/>
                             <constraint firstItem="5c1-6q-B7O" firstAttribute="bottom" secondItem="fXe-uF-hjI" secondAttribute="bottom" constant="-69" id="4Dg-io-GF8"/>
                             <constraint firstItem="LXv-sb-bJk" firstAttribute="leading" secondItem="fXe-uF-hjI" secondAttribute="leadingMargin" constant="-20" id="5T2-dY-tLx"/>
-                            <constraint firstItem="6sQ-TR-nQI" firstAttribute="top" secondItem="5Qy-1Z-VZl" secondAttribute="bottom" id="6fM-xq-3ch"/>
                             <constraint firstItem="5c1-6q-B7O" firstAttribute="leading" secondItem="fXe-uF-hjI" secondAttribute="leadingMargin" constant="-10" id="9Q8-lJ-ga4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Qy-1Z-VZl" secondAttribute="trailing" constant="-20" id="A85-0V-FnR"/>
                             <constraint firstItem="5c1-6q-B7O" firstAttribute="top" secondItem="LXv-sb-bJk" secondAttribute="bottom" constant="20" id="DYH-Sk-NfP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LXv-sb-bJk" secondAttribute="trailing" constant="-20" id="Fey-6V-WWR"/>
+                            <constraint firstItem="5Qy-1Z-VZl" firstAttribute="leading" secondItem="fXe-uF-hjI" secondAttribute="leadingMargin" constant="-20" id="Hzj-DG-gxa"/>
                             <constraint firstItem="LXv-sb-bJk" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="bottom" constant="21" id="Isg-9T-MQt"/>
                             <constraint firstItem="V5C-yX-zND" firstAttribute="top" secondItem="fXe-uF-hjI" secondAttribute="top" constant="64" id="Mqj-Xf-149"/>
                             <constraint firstItem="V5C-yX-zND" firstAttribute="leading" secondItem="fXe-uF-hjI" secondAttribute="leadingMargin" constant="-20" id="b8S-jZ-Kle"/>
-                            <constraint firstItem="5Qy-1Z-VZl" firstAttribute="leading" secondItem="fXe-uF-hjI" secondAttribute="leadingMargin" constant="-20" id="cQl-VH-tjl"/>
                             <constraint firstItem="BI7-l6-rF6" firstAttribute="bottom" secondItem="fXe-uF-hjI" secondAttribute="bottom" constant="-222" id="g9z-Ho-7T0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5c1-6q-B7O" secondAttribute="trailing" constant="-10" id="mmn-Pp-RTt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BI7-l6-rF6" secondAttribute="trailing" constant="-11" id="tIh-bK-K5t"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5Qy-1Z-VZl" secondAttribute="trailing" constant="-20" id="y5f-fF-NIf"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -333,6 +295,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="altSaveButton" destination="BI7-l6-rF6" id="AlA-JI-cZD"/>
+                        <outlet property="altSaveButtonBottomConstraint" destination="g9z-Ho-7T0" id="607-kd-uT4"/>
                         <outlet property="dateField" destination="Pbx-Qm-d64" id="hy0-gY-5S4"/>
                         <outlet property="datePicker" destination="ozo-iS-tEG" id="bQj-BF-oKN"/>
                         <outlet property="datepickerContainer" destination="5Qy-1Z-VZl" id="MSK-Gf-6e2"/>
