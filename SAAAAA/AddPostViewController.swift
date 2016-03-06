@@ -40,8 +40,6 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
 
     
     @IBAction func pickedDate(sender: AnyObject) {
-        print(datePicker.date)
-        print(NSDate().formatDateToDayMonthYear(datePicker.date))
         dateLabel.text = NSDate().formatDateToDayMonthYear(datePicker.date)
     }
 
