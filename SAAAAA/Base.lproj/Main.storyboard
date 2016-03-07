@@ -8,8 +8,12 @@
     <customFonts key="customFonts">
         <mutableArray key="PT_Sans-Bold.ttf">
             <string>PTSans-Bold</string>
+            <string>PTSans-Bold</string>
         </mutableArray>
         <mutableArray key="PT_Sans-Regular.ttf">
+            <string>PTSans-Regular</string>
+            <string>PTSans-Regular</string>
+            <string>PTSans-Regular</string>
             <string>PTSans-Regular</string>
             <string>PTSans-Regular</string>
             <string>PTSans-Regular</string>
@@ -20,10 +24,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Logboek-->
+        <!--LogDetail-->
         <scene sceneID="C0G-3N-zXa">
             <objects>
-                <viewController id="b22-8M-uPV" customClass="LogDetail" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b22-8M-uPV" userLabel="LogDetail" customClass="LogDetail" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KP8-KM-7CJ"/>
                         <viewControllerLayoutGuide type="bottom" id="SeJ-cF-l0C"/>
@@ -31,7 +35,79 @@
                     <view key="view" contentMode="scaleToFill" id="wa3-EI-rP2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-SW-AOr" userLabel="UpperContainer">
+                                <rect key="frame" x="0.0" y="64" width="600" height="69"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Maart 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nG-KM-Fid">
+                                        <rect key="frame" x="30" y="19" width="100" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Cns-nw-6gA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="door" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-kh-L5v">
+                                        <rect key="frame" x="30" y="39" width="30" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="Bd0-Xf-psE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dG-cx-8M7">
+                                        <rect key="frame" x="62" y="39" width="34" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="FK8-UM-B5x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2nG-KM-Fid" firstAttribute="top" secondItem="Hdf-SW-AOr" secondAttribute="top" constant="19" id="4Qk-I1-Dum"/>
+                                    <constraint firstAttribute="height" constant="69" id="Dmk-j9-fUR"/>
+                                    <constraint firstItem="WBa-kh-L5v" firstAttribute="top" secondItem="2nG-KM-Fid" secondAttribute="bottom" id="JJq-GQ-fOd"/>
+                                    <constraint firstItem="WBa-kh-L5v" firstAttribute="leading" secondItem="Hdf-SW-AOr" secondAttribute="leading" constant="30" id="ecn-ta-R0q"/>
+                                    <constraint firstItem="1dG-cx-8M7" firstAttribute="top" secondItem="2nG-KM-Fid" secondAttribute="bottom" id="gNq-M0-u5d"/>
+                                    <constraint firstItem="2nG-KM-Fid" firstAttribute="leading" secondItem="Hdf-SW-AOr" secondAttribute="leading" constant="30" id="oQd-Ka-xBy"/>
+                                    <constraint firstItem="1dG-cx-8M7" firstAttribute="leading" secondItem="WBa-kh-L5v" secondAttribute="trailing" constant="2" id="tku-Af-Tw8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="joC-rg-sk1" userLabel="BottomContainer">
+                                <rect key="frame" x="0.0" y="133" width="600" height="350"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04P-Hw-ds9" userLabel="Body">
+                                        <rect key="frame" x="30" y="0.0" width="540" height="320"/>
+                                        <color key="backgroundColor" red="0.50524259868421051" green="0.69307668585526316" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.75642992409999998" blue="0.98237844119999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="04P-Hw-ds9" secondAttribute="trailing" constant="30" id="cGn-xf-8em"/>
+                                    <constraint firstItem="04P-Hw-ds9" firstAttribute="leading" secondItem="joC-rg-sk1" secondAttribute="leading" constant="30" id="ia7-en-stN"/>
+                                    <constraint firstAttribute="bottom" secondItem="04P-Hw-ds9" secondAttribute="bottom" constant="30" id="mMY-Sk-2EA"/>
+                                    <constraint firstItem="04P-Hw-ds9" firstAttribute="top" secondItem="joC-rg-sk1" secondAttribute="top" id="uXc-Bo-3Xy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hdf-SW-AOr" secondAttribute="trailing" constant="-20" id="4B0-0U-vAm"/>
+                            <constraint firstItem="joC-rg-sk1" firstAttribute="leading" secondItem="wa3-EI-rP2" secondAttribute="leadingMargin" constant="-20" id="OvT-nG-EZq"/>
+                            <constraint firstItem="Hdf-SW-AOr" firstAttribute="leading" secondItem="wa3-EI-rP2" secondAttribute="leadingMargin" constant="-20" id="Pv3-C2-MJI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="joC-rg-sk1" secondAttribute="trailing" constant="-20" id="SoL-ru-FSn"/>
+                            <constraint firstItem="joC-rg-sk1" firstAttribute="top" secondItem="Hdf-SW-AOr" secondAttribute="bottom" id="UHI-1Y-gFb"/>
+                            <constraint firstItem="Hdf-SW-AOr" firstAttribute="top" secondItem="KP8-KM-7CJ" secondAttribute="bottom" id="y04-nu-mr7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Logboek" id="ohB-kY-apM">
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="fqO-Cp-41Y">
@@ -41,6 +117,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyField" destination="04P-Hw-ds9" id="Imq-og-lAL"/>
+                        <outlet property="bottomContainer" destination="joC-rg-sk1" id="9Ze-IP-vby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGG-0y-tGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,7 +361,7 @@
                                 </constraints>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI7-l6-rF6" userLabel="Alt Save Button">
-                                <rect key="frame" x="549" y="336" width="42" height="42"/>
+                                <rect key="frame" x="549" y="331" width="42" height="42"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.14117647059999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="ENK-ei-CQD"/>
@@ -289,7 +369,7 @@
                                 </constraints>
                                 <state key="normal" image="checkArrow"/>
                                 <connections>
-                                    <action selector="saveButtonPressed:" destination="OkD-6l-8Wa" eventType="touchUpInside" id="UAU-NP-lje"/>
+                                    <action selector="altButtonPressed:" destination="OkD-6l-8Wa" eventType="touchUpInside" id="hIK-tg-ciL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -307,7 +387,7 @@
                             <constraint firstItem="LXv-sb-bJk" firstAttribute="top" secondItem="V5C-yX-zND" secondAttribute="bottom" constant="21" id="Isg-9T-MQt"/>
                             <constraint firstItem="V5C-yX-zND" firstAttribute="top" secondItem="fXe-uF-hjI" secondAttribute="top" constant="64" id="Mqj-Xf-149"/>
                             <constraint firstItem="V5C-yX-zND" firstAttribute="leading" secondItem="fXe-uF-hjI" secondAttribute="leadingMargin" constant="-20" id="b8S-jZ-Kle"/>
-                            <constraint firstItem="BI7-l6-rF6" firstAttribute="bottom" secondItem="fXe-uF-hjI" secondAttribute="bottom" constant="-222" id="g9z-Ho-7T0"/>
+                            <constraint firstItem="BI7-l6-rF6" firstAttribute="bottom" secondItem="fXe-uF-hjI" secondAttribute="bottom" constant="-227" id="g9z-Ho-7T0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5c1-6q-B7O" secondAttribute="trailing" constant="-10" id="mmn-Pp-RTt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BI7-l6-rF6" secondAttribute="trailing" constant="-11" id="tIh-bK-K5t"/>
                         </constraints>

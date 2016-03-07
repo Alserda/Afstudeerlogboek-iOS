@@ -37,6 +37,13 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBAction func saveButtonPressed(sender: AnyObject) {
         print("Date: \(datePicker.date), text you've written: \(textField.text)")
     }
+    
+    @IBAction func altButtonPressed(sender: AnyObject) {
+        view.endEditing(true)
+        changeDatepickerAppearance(0.2, hidden: true)
+        showInitialSizedView()
+    }
+    
 
     
     @IBAction func pickedDate(sender: AnyObject) {
