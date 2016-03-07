@@ -20,7 +20,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Log Detail-->
+        <!--Logpost-->
         <scene sceneID="CBp-6x-9zB">
             <objects>
                 <viewController id="GtR-W7-bWJ" customClass="LogDetail" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,34 +31,23 @@
                     <view key="view" contentMode="scaleToFill" id="IqC-ob-uXO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3y-5Q-icF">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKw-mc-S0r" userLabel="TopContainer">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.36826685855263158" blue="0.95686274509803904" alpha="1" colorSpace="calibratedRGB"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="cCO-66-AAi" firstAttribute="top" secondItem="v3y-5Q-icF" secondAttribute="bottom" id="IUH-Hg-gyA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="v3y-5Q-icF" secondAttribute="trailing" constant="-20" id="Krk-U5-WtR"/>
-                            <constraint firstItem="v3y-5Q-icF" firstAttribute="leading" secondItem="IqC-ob-uXO" secondAttribute="leadingMargin" constant="-20" id="e5r-F6-Vgf"/>
-                            <constraint firstItem="v3y-5Q-icF" firstAttribute="top" secondItem="nVH-ov-HT7" secondAttribute="bottom" id="o4x-fP-lcc"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="scrollView" destination="v3y-5Q-icF" id="cfx-WM-wPp"/>
-                        <outlet property="topContainer" destination="rKw-mc-S0r" id="YV7-wJ-zyM"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Logpost" id="Bbk-UN-o6n">
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="v0S-av-BWk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="GtR-W7-bWJ" id="jqy-28-Uq6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="editButton" id="hwh-Q8-y81">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qwb-La-9z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="-1063"/>
+            <point key="canvasLocation" x="2482" y="-1129"/>
         </scene>
         <!--SAAA-->
         <scene sceneID="lux-dj-oHj">
@@ -445,6 +434,7 @@
         <image name="backButton" width="23" height="17"/>
         <image name="checkArrow" width="23" height="18"/>
         <image name="disclosure-arrow" width="8" height="13"/>
+        <image name="editButton" width="21" height="21"/>
         <image name="fotosIcon" width="25" height="25"/>
         <image name="logboekIcon" width="25" height="18"/>
         <image name="pink-circle" width="12" height="12"/>
