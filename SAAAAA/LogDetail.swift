@@ -10,7 +10,8 @@ import UIKit
 
 class LogDetail: UIViewController {
     @IBOutlet var scrollView: UIScrollView!
-
+    @IBOutlet var topContainer: UIView!
+    
     override func viewDidLoad() {
         print(__FUNCTION__)
         styleView()
@@ -19,6 +20,16 @@ class LogDetail: UIViewController {
     
     func styleView() {
         scrollView.contentSize = CGSizeMake(320, 5000)
+        
+        topContainer.translatesAutoresizingMaskIntoConstraints = false
+        topContainer.removeConstraints(topContainer.constraints)
+        topContainer.topAnchor.constraintEqualToAnchor(scrollView.topAnchor, constant: -20).active = true
+        
+        print(scrollView.frame.size)
+        
+        topContainer.constrainToSize(CGSize(width: scrollView.frame.width, height: 69))
+        
+        
     }
     
     
