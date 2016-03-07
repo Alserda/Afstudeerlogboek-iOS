@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A807F40E1C8C85DF00BB832A /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F40D1C8C85DF00BB832A /* DeviceSize.swift */; };
+		A807F4121C8D6EB400BB832A /* LogDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F4111C8D6EB400BB832A /* LogDetail.swift */; };
 		A81748451C8C7B3A00F231EF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81748441C8C7B3A00F231EF /* UIView.swift */; };
 		A81748471C8C7B4600F231EF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81748461C8C7B4600F231EF /* UIViewController.swift */; };
 		A87545AF1C8B0D20000ED78A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545AE1C8B0D20000ED78A /* UIColor.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		A807F40D1C8C85DF00BB832A /* DeviceSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceSize.swift; path = Models/DeviceSize.swift; sourceTree = "<group>"; };
+		A807F4111C8D6EB400BB832A /* LogDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetail.swift; sourceTree = "<group>"; };
 		A81748441C8C7B3A00F231EF /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Extentions/UIView.swift; sourceTree = "<group>"; };
 		A81748461C8C7B4600F231EF /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extentions/UIViewController.swift; sourceTree = "<group>"; };
 		A87545AE1C8B0D20000ED78A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extentions/UIColor.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				A8F4F8E11C89B07C00CB4723 /* LogbookViewController.swift */,
 				A8F4F8FF1C89D10400CB4723 /* AddPostViewController.swift */,
 				A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */,
+				A807F4111C8D6EB400BB832A /* LogDetail.swift */,
 				A8F4F8E31C89B07C00CB4723 /* Main.storyboard */,
 				A8F4F8E81C89B07C00CB4723 /* LaunchScreen.storyboard */,
 				A8F4F8EB1C89B07C00CB4723 /* Info.plist */,
@@ -214,6 +217,7 @@
 				A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */,
 				A81748451C8C7B3A00F231EF /* UIView.swift in Sources */,
 				A8F4F8E01C89B07C00CB4723 /* AppDelegate.swift in Sources */,
+				A807F4121C8D6EB400BB832A /* LogDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

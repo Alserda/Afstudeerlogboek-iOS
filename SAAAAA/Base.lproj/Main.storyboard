@@ -20,6 +20,32 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Logboek-->
+        <scene sceneID="C0G-3N-zXa">
+            <objects>
+                <viewController id="b22-8M-uPV" customClass="LogDetail" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KP8-KM-7CJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="SeJ-cF-l0C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wa3-EI-rP2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Logboek" id="ohB-kY-apM">
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="fqO-Cp-41Y">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="b22-8M-uPV" id="yRO-Wl-NFb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGG-0y-tGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="-1117"/>
+        </scene>
         <!--SAAA-->
         <scene sceneID="lux-dj-oHj">
             <objects>
@@ -89,6 +115,9 @@
                                         <constraint firstItem="XFP-BL-mwa" firstAttribute="trailing" secondItem="2Uf-y5-h2z" secondAttribute="trailing" constant="-18" id="q7M-uA-61O"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="b22-8M-uPV" kind="show" identifier="toDetail" id="H2Y-pD-KX7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
