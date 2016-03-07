@@ -8,12 +8,8 @@
     <customFonts key="customFonts">
         <mutableArray key="PT_Sans-Bold.ttf">
             <string>PTSans-Bold</string>
-            <string>PTSans-Bold</string>
         </mutableArray>
         <mutableArray key="PT_Sans-Regular.ttf">
-            <string>PTSans-Regular</string>
-            <string>PTSans-Regular</string>
-            <string>PTSans-Regular</string>
             <string>PTSans-Regular</string>
             <string>PTSans-Regular</string>
             <string>PTSans-Regular</string>
@@ -24,102 +20,38 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--LogDetail-->
-        <scene sceneID="C0G-3N-zXa">
+        <!--Log Detail-->
+        <scene sceneID="CBp-6x-9zB">
             <objects>
-                <viewController id="b22-8M-uPV" userLabel="LogDetail" customClass="LogDetail" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GtR-W7-bWJ" customClass="LogDetail" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KP8-KM-7CJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="SeJ-cF-l0C"/>
+                        <viewControllerLayoutGuide type="top" id="nVH-ov-HT7"/>
+                        <viewControllerLayoutGuide type="bottom" id="cCO-66-AAi"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wa3-EI-rP2">
+                    <view key="view" contentMode="scaleToFill" id="IqC-ob-uXO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFi-ao-GPg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-SW-AOr" userLabel="UpperContainer">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 Maart 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nG-KM-Fid">
-                                                <rect key="frame" x="30" y="19" width="100" height="20"/>
-                                                <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="door" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-kh-L5v">
-                                                <rect key="frame" x="30" y="39" width="30" height="19"/>
-                                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
-                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Peter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dG-cx-8M7">
-                                                <rect key="frame" x="62" y="39" width="34" height="19"/>
-                                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
-                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="69" id="MML-jn-gia"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joC-rg-sk1" userLabel="BottomContainer">
-                                        <rect key="frame" x="0.0" y="69" width="600" height="350"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04P-Hw-ds9" userLabel="Body">
-                                                <rect key="frame" x="30" y="0.0" width="540" height="320"/>
-                                                <color key="backgroundColor" red="0.50524259868421051" green="0.69307668585526316" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="0.75642992409999998" blue="0.98237844119999995" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Hdf-SW-AOr" secondAttribute="bottom" constant="403" id="AWR-nP-RFr"/>
-                                    <constraint firstItem="Hdf-SW-AOr" firstAttribute="centerX" secondItem="oFi-ao-GPg" secondAttribute="centerX" id="GEg-Ri-ehK"/>
-                                    <constraint firstItem="Hdf-SW-AOr" firstAttribute="leading" secondItem="oFi-ao-GPg" secondAttribute="leading" id="gFm-MY-dyl"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hdf-SW-AOr" secondAttribute="trailing" id="r21-tU-mYv"/>
-                                    <constraint firstItem="Hdf-SW-AOr" firstAttribute="top" secondItem="oFi-ao-GPg" secondAttribute="top" id="tj9-G8-70X"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="joC-rg-sk1"/>
-                                    </mask>
-                                </variation>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3y-5Q-icF">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.36826685855263158" blue="0.95686274509803904" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oFi-ao-GPg" firstAttribute="bottom" secondItem="wa3-EI-rP2" secondAttribute="bottomMargin" id="7cm-tF-CEC"/>
-                            <constraint firstItem="oFi-ao-GPg" firstAttribute="top" secondItem="wa3-EI-rP2" secondAttribute="topMargin" id="b4C-CN-iH0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oFi-ao-GPg" secondAttribute="trailing" constant="-20" id="cty-fC-ZZt"/>
-                            <constraint firstItem="oFi-ao-GPg" firstAttribute="leading" secondItem="wa3-EI-rP2" secondAttribute="leadingMargin" constant="-20" id="iEj-U3-3Jr"/>
+                            <constraint firstItem="cCO-66-AAi" firstAttribute="top" secondItem="v3y-5Q-icF" secondAttribute="bottom" id="IUH-Hg-gyA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v3y-5Q-icF" secondAttribute="trailing" constant="-20" id="Krk-U5-WtR"/>
+                            <constraint firstItem="v3y-5Q-icF" firstAttribute="leading" secondItem="IqC-ob-uXO" secondAttribute="leadingMargin" constant="-20" id="e5r-F6-Vgf"/>
+                            <constraint firstItem="v3y-5Q-icF" firstAttribute="top" secondItem="nVH-ov-HT7" secondAttribute="bottom" id="o4x-fP-lcc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Logboek" id="ohB-kY-apM">
-                        <barButtonItem key="leftBarButtonItem" image="backButton" id="fqO-Cp-41Y">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="backButtonPressed:" destination="b22-8M-uPV" id="yRO-Wl-NFb"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
-                        <outlet property="bodyField" destination="04P-Hw-ds9" id="Imq-og-lAL"/>
-                        <outlet property="bottomContainer" destination="joC-rg-sk1" id="9Ze-IP-vby"/>
+                        <outlet property="scrollView" destination="v3y-5Q-icF" id="cfx-WM-wPp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cGG-0y-tGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwb-La-9z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="-1117"/>
+            <point key="canvasLocation" x="1920" y="-1063"/>
         </scene>
         <!--SAAA-->
         <scene sceneID="lux-dj-oHj">
@@ -191,7 +123,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="b22-8M-uPV" kind="show" identifier="toDetail" id="H2Y-pD-KX7"/>
+                                    <segue destination="GtR-W7-bWJ" kind="show" identifier="toDetail" id="6BT-5c-bM7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

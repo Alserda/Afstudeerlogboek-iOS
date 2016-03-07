@@ -9,9 +9,7 @@
 import UIKit
 
 class LogDetail: UIViewController {
-    
-    @IBOutlet var bodyField: UITextView!
-    @IBOutlet var bottomContainer: UIView!
+    @IBOutlet var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         print(__FUNCTION__)
@@ -20,19 +18,7 @@ class LogDetail: UIViewController {
     
     
     func styleView() {
-        bodyField.contentInset = UIEdgeInsetsMake(-13, -6, 0, 0)
-        bodyField.scrollEnabled = false
-        bodyField.sizeToFit()
-        bottomContainer.sizeToFit()
-        
-        let fixedWidth = bodyField.frame.size.width
-        bodyField.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
-        let newSize = bodyField.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
-        var newFrame = bodyField.frame
-        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
-        print(bodyField.frame)
-        print(newFrame.height)
-        bodyField.frame = newFrame;
+        scrollView.contentSize = CGSizeMake(320, 5000)
     }
     
     
