@@ -36,77 +36,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-SW-AOr" userLabel="UpperContainer">
-                                <rect key="frame" x="0.0" y="64" width="600" height="69"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFi-ao-GPg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Maart 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nG-KM-Fid">
-                                        <rect key="frame" x="30" y="19" width="100" height="20"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-SW-AOr" userLabel="UpperContainer">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 Maart 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nG-KM-Fid">
+                                                <rect key="frame" x="30" y="19" width="100" height="20"/>
+                                                <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="door" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-kh-L5v">
+                                                <rect key="frame" x="30" y="39" width="30" height="19"/>
+                                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
+                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Peter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dG-cx-8M7">
+                                                <rect key="frame" x="62" y="39" width="34" height="19"/>
+                                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
+                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Cns-nw-6gA"/>
+                                            <constraint firstAttribute="height" constant="69" id="MML-jn-gia"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PTSans-Bold" family="PT Sans" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="door" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-kh-L5v">
-                                        <rect key="frame" x="30" y="39" width="30" height="19"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="19" id="Bd0-Xf-psE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
-                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dG-cx-8M7">
-                                        <rect key="frame" x="62" y="39" width="34" height="19"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="19" id="FK8-UM-B5x"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
-                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joC-rg-sk1" userLabel="BottomContainer">
+                                        <rect key="frame" x="0.0" y="69" width="600" height="350"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04P-Hw-ds9" userLabel="Body">
+                                                <rect key="frame" x="30" y="0.0" width="540" height="320"/>
+                                                <color key="backgroundColor" red="0.50524259868421051" green="0.69307668585526316" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.75642992409999998" blue="0.98237844119999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="2nG-KM-Fid" firstAttribute="top" secondItem="Hdf-SW-AOr" secondAttribute="top" constant="19" id="4Qk-I1-Dum"/>
-                                    <constraint firstAttribute="height" constant="69" id="Dmk-j9-fUR"/>
-                                    <constraint firstItem="WBa-kh-L5v" firstAttribute="top" secondItem="2nG-KM-Fid" secondAttribute="bottom" id="JJq-GQ-fOd"/>
-                                    <constraint firstItem="WBa-kh-L5v" firstAttribute="leading" secondItem="Hdf-SW-AOr" secondAttribute="leading" constant="30" id="ecn-ta-R0q"/>
-                                    <constraint firstItem="1dG-cx-8M7" firstAttribute="top" secondItem="2nG-KM-Fid" secondAttribute="bottom" id="gNq-M0-u5d"/>
-                                    <constraint firstItem="2nG-KM-Fid" firstAttribute="leading" secondItem="Hdf-SW-AOr" secondAttribute="leading" constant="30" id="oQd-Ka-xBy"/>
-                                    <constraint firstItem="1dG-cx-8M7" firstAttribute="leading" secondItem="WBa-kh-L5v" secondAttribute="trailing" constant="2" id="tku-Af-Tw8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hdf-SW-AOr" secondAttribute="bottom" constant="403" id="AWR-nP-RFr"/>
+                                    <constraint firstItem="Hdf-SW-AOr" firstAttribute="centerX" secondItem="oFi-ao-GPg" secondAttribute="centerX" id="GEg-Ri-ehK"/>
+                                    <constraint firstItem="Hdf-SW-AOr" firstAttribute="leading" secondItem="oFi-ao-GPg" secondAttribute="leading" id="gFm-MY-dyl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hdf-SW-AOr" secondAttribute="trailing" id="r21-tU-mYv"/>
+                                    <constraint firstItem="Hdf-SW-AOr" firstAttribute="top" secondItem="oFi-ao-GPg" secondAttribute="top" id="tj9-G8-70X"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="joC-rg-sk1" userLabel="BottomContainer">
-                                <rect key="frame" x="0.0" y="133" width="600" height="350"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04P-Hw-ds9" userLabel="Body">
-                                        <rect key="frame" x="30" y="0.0" width="540" height="320"/>
-                                        <color key="backgroundColor" red="0.50524259868421051" green="0.69307668585526316" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="PTSans-Regular" family="PT Sans" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.75642992409999998" blue="0.98237844119999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="04P-Hw-ds9" secondAttribute="trailing" constant="30" id="cGn-xf-8em"/>
-                                    <constraint firstItem="04P-Hw-ds9" firstAttribute="leading" secondItem="joC-rg-sk1" secondAttribute="leading" constant="30" id="ia7-en-stN"/>
-                                    <constraint firstAttribute="bottom" secondItem="04P-Hw-ds9" secondAttribute="bottom" constant="30" id="mMY-Sk-2EA"/>
-                                    <constraint firstItem="04P-Hw-ds9" firstAttribute="top" secondItem="joC-rg-sk1" secondAttribute="top" id="uXc-Bo-3Xy"/>
-                                </constraints>
-                            </view>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="joC-rg-sk1"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Hdf-SW-AOr" secondAttribute="trailing" constant="-20" id="4B0-0U-vAm"/>
-                            <constraint firstItem="joC-rg-sk1" firstAttribute="leading" secondItem="wa3-EI-rP2" secondAttribute="leadingMargin" constant="-20" id="OvT-nG-EZq"/>
-                            <constraint firstItem="Hdf-SW-AOr" firstAttribute="leading" secondItem="wa3-EI-rP2" secondAttribute="leadingMargin" constant="-20" id="Pv3-C2-MJI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="joC-rg-sk1" secondAttribute="trailing" constant="-20" id="SoL-ru-FSn"/>
-                            <constraint firstItem="joC-rg-sk1" firstAttribute="top" secondItem="Hdf-SW-AOr" secondAttribute="bottom" id="UHI-1Y-gFb"/>
-                            <constraint firstItem="Hdf-SW-AOr" firstAttribute="top" secondItem="KP8-KM-7CJ" secondAttribute="bottom" id="y04-nu-mr7"/>
+                            <constraint firstItem="oFi-ao-GPg" firstAttribute="bottom" secondItem="wa3-EI-rP2" secondAttribute="bottomMargin" id="7cm-tF-CEC"/>
+                            <constraint firstItem="oFi-ao-GPg" firstAttribute="top" secondItem="wa3-EI-rP2" secondAttribute="topMargin" id="b4C-CN-iH0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oFi-ao-GPg" secondAttribute="trailing" constant="-20" id="cty-fC-ZZt"/>
+                            <constraint firstItem="oFi-ao-GPg" firstAttribute="leading" secondItem="wa3-EI-rP2" secondAttribute="leadingMargin" constant="-20" id="iEj-U3-3Jr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Logboek" id="ohB-kY-apM">
