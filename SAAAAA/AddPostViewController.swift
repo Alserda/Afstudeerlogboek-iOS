@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var saveButton: UIButton!
@@ -19,6 +20,8 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var altSaveButtonBottomConstraint: NSLayoutConstraint!
     let placeholderText: String = "Logboek bericht"
+    let backendConnection = BackendConnection.sharedInstance
+    let storageManager = StorageManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,18 +36,11 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         navigationController?.popViewControllerAnimated(true)
     }
     
-    
-    @IBAction func saveButtonPressed(sender: AnyObject) {
-        print("Date: \(datePicker.date), text you've written: \(textField.text)")
-    }
-    
     @IBAction func altButtonPressed(sender: AnyObject) {
         view.endEditing(true)
         changeDatepickerAppearance(0.2, hidden: true)
         showInitialSizedView()
     }
-    
-
     
     @IBAction func pickedDate(sender: AnyObject) {
         dateLabel.text = NSDate().formatDateToDayMonthYear(datePicker.date)
@@ -149,6 +145,19 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         datepickerContainer.hidden = hidden
     }
     
+    @IBAction func saveButtonPressed(sender: AnyObject) {
+        backendConnection.createLogpost(date: String(datePicker.date), body: textField.text, success: { (response) -> () in
+            self.storeCreatedPost(post: response)
+            }) { (error) -> () in
+                print(error)
+        }
+    }
+    
+    func storeCreatedPost(post postJSON: JSON) {
+        storageManager.storePost(with: postJSON) { (success) -> () in
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+    }
 }
 
 

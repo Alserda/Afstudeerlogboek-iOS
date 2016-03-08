@@ -12,16 +12,18 @@
 		A807F4121C8D6EB400BB832A /* LogDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807F4111C8D6EB400BB832A /* LogDetail.swift */; };
 		A81748451C8C7B3A00F231EF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81748441C8C7B3A00F231EF /* UIView.swift */; };
 		A81748471C8C7B4600F231EF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81748461C8C7B4600F231EF /* UIViewController.swift */; };
+		A83859F31C8F7FD400F3D5F4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83859F21C8F7FD400F3D5F4 /* String.swift */; };
 		A87545AF1C8B0D20000ED78A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545AE1C8B0D20000ED78A /* UIColor.swift */; };
 		A87545B21C8B0DDE000ED78A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B11C8B0DDE000ED78A /* Colors.swift */; };
 		A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B31C8B9E17000ED78A /* NSDate.swift */; };
-		A8AB8F0A1C8F49FB00DABB37 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AB8F091C8F49FB00DABB37 /* Backend.swift */; };
+		A8AB8F0A1C8F49FB00DABB37 /* BackendConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AB8F091C8F49FB00DABB37 /* BackendConnection.swift */; };
+		A8AB8F121C8F618800DABB37 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AB8F111C8F618800DABB37 /* Database.swift */; };
 		A8F4F8E01C89B07C00CB4723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8DF1C89B07C00CB4723 /* AppDelegate.swift */; };
-		A8F4F8E21C89B07C00CB4723 /* LogbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8E11C89B07C00CB4723 /* LogbookViewController.swift */; };
+		A8F4F8E21C89B07C00CB4723 /* LogbookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8E11C89B07C00CB4723 /* LogbookView.swift */; };
 		A8F4F8E51C89B07C00CB4723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8E31C89B07C00CB4723 /* Main.storyboard */; };
 		A8F4F8E71C89B07C00CB4723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8E61C89B07C00CB4723 /* Assets.xcassets */; };
 		A8F4F8EA1C89B07C00CB4723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8E81C89B07C00CB4723 /* LaunchScreen.storyboard */; };
-		A8F4F8F21C89B12C00CB4723 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8F11C89B12C00CB4723 /* AlbumViewController.swift */; };
+		A8F4F8F21C89B12C00CB4723 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8F11C89B12C00CB4723 /* AlbumView.swift */; };
 		A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */; };
 		A8F4F8FB1C89C16200CB4723 /* PT_Sans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8F91C89BEAF00CB4723 /* PT_Sans-Bold.ttf */; };
 		A8F4F8FC1C89C16500CB4723 /* PT_Sans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8FA1C89BEAF00CB4723 /* PT_Sans-Regular.ttf */; };
@@ -35,18 +37,20 @@
 		A807F4111C8D6EB400BB832A /* LogDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetail.swift; sourceTree = "<group>"; };
 		A81748441C8C7B3A00F231EF /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Extentions/UIView.swift; sourceTree = "<group>"; };
 		A81748461C8C7B4600F231EF /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extentions/UIViewController.swift; sourceTree = "<group>"; };
+		A83859F21C8F7FD400F3D5F4 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A87545AE1C8B0D20000ED78A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extentions/UIColor.swift; sourceTree = "<group>"; };
 		A87545B11C8B0DDE000ED78A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Models/Colors.swift; sourceTree = "<group>"; };
 		A87545B31C8B9E17000ED78A /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDate.swift; path = Extentions/NSDate.swift; sourceTree = "<group>"; };
-		A8AB8F091C8F49FB00DABB37 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Backend.swift; path = API/Backend.swift; sourceTree = "<group>"; };
+		A8AB8F091C8F49FB00DABB37 /* BackendConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackendConnection.swift; path = API/BackendConnection.swift; sourceTree = "<group>"; };
+		A8AB8F111C8F618800DABB37 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		A8F4F8DC1C89B07C00CB4723 /* SAAAAA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAAAAA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F4F8DF1C89B07C00CB4723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8F4F8E11C89B07C00CB4723 /* LogbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookViewController.swift; sourceTree = "<group>"; };
+		A8F4F8E11C89B07C00CB4723 /* LogbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookView.swift; sourceTree = "<group>"; };
 		A8F4F8E41C89B07C00CB4723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8F4F8E61C89B07C00CB4723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		A8F4F8E91C89B07C00CB4723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8F4F8EB1C89B07C00CB4723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8F4F8F11C89B12C00CB4723 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		A8F4F8F11C89B12C00CB4723 /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A8F4F8F91C89BEAF00CB4723 /* PT_Sans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PT_Sans-Bold.ttf"; path = "Resources/Fonts/PT_Sans-Bold.ttf"; sourceTree = "<group>"; };
 		A8F4F8FA1C89BEAF00CB4723 /* PT_Sans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PT_Sans-Regular.ttf"; path = "Resources/Fonts/PT_Sans-Regular.ttf"; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				A87545B31C8B9E17000ED78A /* NSDate.swift */,
 				A81748441C8C7B3A00F231EF /* UIView.swift */,
 				A81748461C8C7B4600F231EF /* UIViewController.swift */,
+				A83859F21C8F7FD400F3D5F4 /* String.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			children = (
 				A87545B11C8B0DDE000ED78A /* Colors.swift */,
 				A807F40D1C8C85DF00BB832A /* DeviceSize.swift */,
+				A8AB8F111C8F618800DABB37 /* Database.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -98,7 +104,7 @@
 		A8AB8F081C8F492B00DABB37 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A8AB8F091C8F49FB00DABB37 /* Backend.swift */,
+				A8AB8F091C8F49FB00DABB37 /* BackendConnection.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -124,16 +130,16 @@
 		A8F4F8DE1C89B07C00CB4723 /* SAAAAA */ = {
 			isa = PBXGroup;
 			children = (
+				A8F4F8DF1C89B07C00CB4723 /* AppDelegate.swift */,
 				A8AB8F081C8F492B00DABB37 /* API */,
 				A87545B01C8B0D8D000ED78A /* Models */,
 				A87545AD1C8B0D00000ED78A /* Extentions */,
 				A8F4F8F71C89BE6800CB4723 /* Resources */,
-				A8F4F8DF1C89B07C00CB4723 /* AppDelegate.swift */,
-				A8F4F8F11C89B12C00CB4723 /* AlbumViewController.swift */,
-				A8F4F8E11C89B07C00CB4723 /* LogbookViewController.swift */,
+				A8F4F8F11C89B12C00CB4723 /* AlbumView.swift */,
+				A8F4F8E11C89B07C00CB4723 /* LogbookView.swift */,
 				A8F4F8FF1C89D10400CB4723 /* AddPostViewController.swift */,
-				A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */,
 				A807F4111C8D6EB400BB832A /* LogDetail.swift */,
+				A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */,
 				A8F4F8E31C89B07C00CB4723 /* Main.storyboard */,
 				A8F4F8E81C89B07C00CB4723 /* LaunchScreen.storyboard */,
 				A8F4F8EB1C89B07C00CB4723 /* Info.plist */,
@@ -292,18 +298,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8F4F8F21C89B12C00CB4723 /* AlbumViewController.swift in Sources */,
+				A8F4F8F21C89B12C00CB4723 /* AlbumView.swift in Sources */,
 				A87545AF1C8B0D20000ED78A /* UIColor.swift in Sources */,
 				A807F40E1C8C85DF00BB832A /* DeviceSize.swift in Sources */,
 				A8F4F9001C89D10400CB4723 /* AddPostViewController.swift in Sources */,
 				A87545B21C8B0DDE000ED78A /* Colors.swift in Sources */,
 				A81748471C8C7B4600F231EF /* UIViewController.swift in Sources */,
-				A8AB8F0A1C8F49FB00DABB37 /* Backend.swift in Sources */,
+				A8AB8F0A1C8F49FB00DABB37 /* BackendConnection.swift in Sources */,
 				A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */,
-				A8F4F8E21C89B07C00CB4723 /* LogbookViewController.swift in Sources */,
+				A8F4F8E21C89B07C00CB4723 /* LogbookView.swift in Sources */,
 				A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */,
 				A81748451C8C7B3A00F231EF /* UIView.swift in Sources */,
 				A8F4F8E01C89B07C00CB4723 /* AppDelegate.swift in Sources */,
+				A83859F31C8F7FD400F3D5F4 /* String.swift in Sources */,
+				A8AB8F121C8F618800DABB37 /* Database.swift in Sources */,
 				A807F4121C8D6EB400BB832A /* LogDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

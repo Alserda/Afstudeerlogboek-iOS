@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
 enum Router: URLRequestConvertible {
     static let baseURLString = "http://localhost:3000"
     static var OAuthToken: String?
@@ -52,4 +51,48 @@ enum Router: URLRequestConvertible {
             return mutableURLRequest
         }
     }
+}
+
+class BackendConnection {
+    static let sharedInstance = BackendConnection()
+    
+    func createLogpost(date date: String, body: String, success: (response: JSON) -> (), failed: (error: NSError) -> ()) -> Void {
+        let parameters = [
+            "post": [
+                "date": date,
+                "body": body,
+                "author": "Peter"
+                
+            ]
+        ]
+
+        Alamofire.request(Router.CreateLogpost(parameters)).responseJSON { (response) -> Void in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value);
+                    
+                    success(response: json)
+                }
+            case .Failure(let error):
+                failed(error: error)
+            }
+        }
+    }
+    
+    func fetchLogposts(success: (response: JSON) -> (), failed: (error: NSError) -> ()) -> Void {
+        Alamofire.request(Router.FetchLogposts).responseJSON { (response) -> Void in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value);
+                    
+                    success(response: json)
+                }
+            case .Failure(let error):
+                failed(error: error)
+            }
+        }
+    }
+    
 }

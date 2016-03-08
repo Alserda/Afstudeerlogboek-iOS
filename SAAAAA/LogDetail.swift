@@ -15,9 +15,11 @@ class LogDetail: UIViewController {
     let authorLabel: UILabel = UILabel()
     let bottomContainer: UIView = UIView()
     let postTextView: UITextView = UITextView()
+    var post: Post = Post()
     
     override func viewDidLoad() {
         print(__FUNCTION__)
+        print(post)
         addScrollView()
         addTopContainer()
         addDateLabel()
@@ -49,7 +51,7 @@ class LogDetail: UIViewController {
         dateLabel.font = UIFont(name: "PTSans-Bold", size: 17)
         dateLabel.textColor = saaaColor.darkestBlack
         
-        dateLabel.text = "4 Maart 2016"
+        dateLabel.text = NSDate().formatDateToDayMonthYear(String().formatDate(post.date))
         topContainer.addSubview(dateLabel)
         
         dateLabel.topAnchor.constraintEqualToAnchor(topContainer.topAnchor, constant: 20).active = true
@@ -60,7 +62,7 @@ class LogDetail: UIViewController {
     func addAuthorLabel() {
         authorLabel.translatesAutoresizingMaskIntoConstraints = false
         authorLabel.font = UIFont(name: "PTSans-Regular", size: 15)
-        authorLabel.text = "door Peter"
+        authorLabel.text = "door \(post.author)"
         authorLabel.textColor = saaaColor.darkBlack
         
         topContainer.addSubview(authorLabel)
@@ -77,7 +79,7 @@ class LogDetail: UIViewController {
     
     func addPostTextField() {
         postTextView.translatesAutoresizingMaskIntoConstraints = false
-        postTextView.text = "Lorem pot its fo rizzle mofo amizzle, shit adipiscing you son of a bizzle. Yippiyo sapien velizzle, away volutpat, gangster bizzle, uhuh ... yih! vizzle, ass. Pellentesque rizzle tortizzle. The bizzle erizzle. \n \nGet down get down gangster dolizzle dapibus fo shizzle tempizzle owned. Maurizzle pellentesque nibh we gonna chung turpizzle. Hizzle in tortor. Phat eleifend rhoncus shiznit. In hizzle phat platea dictumst. Ghetto ghetto. Curabitizzle daahng dawg urna, pretium izzle, hizzle uhuh ... yih!, eleifend vitae, nunc. Cool suscipit. Dawg semper velit sizzle cool.Lorem pot its fo rizzle mofo amizzle, shit adipiscing you son of a bizzle. \n \nYippiyo sapien velizzle, away volutpat, gangster bizzle, uhuh ... yih! vizzle, ass. Pellentesque rizzle tortizzle. The bizzle erizzle. Get down get down gangster dolizzle dapibus fo shizzle tempizzle owned. Maurizzle pellentesque nibh we gonna chung turpizzle. Hizzle in tortor. Phat eleifend rhoncus shiznit. In hizzle phat platea dictumst. \n \nGhetto ghetto. Curabitizzle daahng dawg urna, pretium izzle, hizzle uhuh ... yih!, eleifend vitae, nunc. Cool suscipit. Dawg semper velit sizzle cool."
+        postTextView.text = post.body
         postTextView.contentInset = UIEdgeInsetsMake(0, -6, 0, 0)
         postTextView.scrollEnabled = false
         postTextView.textColor = saaaColor.lightGrey

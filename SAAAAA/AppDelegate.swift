@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,24 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        for family: String in UIFont.familyNames()
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNamesForFamilyName(family)
-            {
-                print("== \(names)")
-            }
-        }
-        // Override point for customization after application launch.
-//        let albumViewController = AlbumViewController()
-//        let logbookViewController = LogbookViewController()
-//        
-//        let tabBarController = UITabBarController()
-//        let logbookNavigationController = UINavigationController(rootViewController: logbookViewController)
-//        let albumNavigationController = UINavigationController(rootViewController: albumViewController)
-//        tabBarController.viewControllers = [logbookNavigationController, albumNavigationController]
-//        
-//        window?.rootViewController = tabBarController
+//        for family: String in UIFont.familyNames()
+//        {
+//            print("\(family)")
+//            for names: String in UIFont.fontNamesForFamilyName(family)
+//            {
+//                print("== \(names)")
+//            }
+//        }
+        
+        print(Realm.Configuration.defaultConfiguration.path!)
+        
+
         return true
     }
 
