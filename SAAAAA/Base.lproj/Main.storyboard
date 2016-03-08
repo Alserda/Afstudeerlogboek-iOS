@@ -388,6 +388,25 @@
             </objects>
             <point key="canvasLocation" x="940" y="303"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="nlP-yE-JC0">
+            <objects>
+                <viewController id="n4b-nH-Q7P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mu4-r8-rCl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lg7-7b-bdL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ca2-qb-uoE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsIcon" id="8y5-rM-njE" customClass="se"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dt-Uc-Uah" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="-1082"/>
+        </scene>
         <!--Logboek-->
         <scene sceneID="1Vg-yc-9Cy">
             <objects>
@@ -422,21 +441,23 @@
                     <connections>
                         <segue destination="0d0-FZ-dCd" kind="relationship" relationship="viewControllers" id="CZb-GL-AwV"/>
                         <segue destination="I60-1M-hnE" kind="relationship" relationship="viewControllers" id="Qof-hJ-6Xs"/>
+                        <segue destination="n4b-nH-Q7P" kind="relationship" relationship="viewControllers" id="ais-zc-JOC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f59-FV-0WO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="-179"/>
+            <point key="canvasLocation" x="42" y="-357"/>
         </scene>
     </scenes>
     <resources>
         <image name="addButton" width="22" height="22"/>
-        <image name="backButton" width="23" height="17"/>
-        <image name="checkArrow" width="23" height="18"/>
+        <image name="backButton" width="21" height="17"/>
+        <image name="checkArrow" width="22" height="17"/>
         <image name="disclosure-arrow" width="8" height="13"/>
         <image name="editButton" width="21" height="21"/>
         <image name="fotosIcon" width="25" height="25"/>
         <image name="logboekIcon" width="25" height="18"/>
         <image name="pink-circle" width="12" height="12"/>
+        <image name="settingsIcon" width="25" height="25"/>
     </resources>
 </document>
