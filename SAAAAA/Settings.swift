@@ -45,7 +45,6 @@ class Settings: UIViewController, UITextFieldDelegate {
 
         let SaaaaView = storyboard?.instantiateViewControllerWithIdentifier("Saaaa")
         SaaaaView?.hidesBottomBarWhenPushed = true
-        SaaaaView?.navigationController?.navigationBarHidden = true
         navigationController?.pushViewController(SaaaaView!, animated: false)
     }
     

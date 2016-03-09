@@ -16,6 +16,7 @@
 		A83859F91C90293900F3D5F4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83859F81C90293900F3D5F4 /* Settings.swift */; };
 		A83859FB1C9039F000F3D5F4 /* Saaaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83859FA1C9039F000F3D5F4 /* Saaaa.swift */; };
 		A83859FE1C9040BE00F3D5F4 /* saaaa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A83859FD1C9040BE00F3D5F4 /* saaaa.mp3 */; };
+		A855D1191C9093C100AAEC80 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855D1181C9093C100AAEC80 /* UIImageView.swift */; };
 		A87545AF1C8B0D20000ED78A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545AE1C8B0D20000ED78A /* UIColor.swift */; };
 		A87545B21C8B0DDE000ED78A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B11C8B0DDE000ED78A /* Colors.swift */; };
 		A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B31C8B9E17000ED78A /* NSDate.swift */; };
@@ -43,6 +44,7 @@
 		A83859F81C90293900F3D5F4 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		A83859FA1C9039F000F3D5F4 /* Saaaa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Saaaa.swift; sourceTree = "<group>"; };
 		A83859FD1C9040BE00F3D5F4 /* saaaa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = saaaa.mp3; sourceTree = "<group>"; };
+		A855D1181C9093C100AAEC80 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Extentions/UIImageView.swift; sourceTree = "<group>"; };
 		A87545AE1C8B0D20000ED78A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extentions/UIColor.swift; sourceTree = "<group>"; };
 		A87545B11C8B0DDE000ED78A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Models/Colors.swift; sourceTree = "<group>"; };
 		A87545B31C8B9E17000ED78A /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDate.swift; path = Extentions/NSDate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				A81748441C8C7B3A00F231EF /* UIView.swift */,
 				A81748461C8C7B4600F231EF /* UIViewController.swift */,
 				A83859F21C8F7FD400F3D5F4 /* String.swift */,
+				A855D1181C9093C100AAEC80 /* UIImageView.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */,
 				A83859FB1C9039F000F3D5F4 /* Saaaa.swift in Sources */,
 				A8F4F8E21C89B07C00CB4723 /* LogbookView.swift in Sources */,
+				A855D1191C9093C100AAEC80 /* UIImageView.swift in Sources */,
 				A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */,
 				A83859F91C90293900F3D5F4 /* Settings.swift in Sources */,
 				A81748451C8C7B3A00F231EF /* UIView.swift in Sources */,

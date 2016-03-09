@@ -64,7 +64,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iul-M2-ZFZ" id="2Uf-y5-h2z">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pink-circle" translatesAutoresizingMaskIntoConstraints="NO" id="XHq-dN-y0A">
@@ -192,7 +192,7 @@
                                             <constraint firstAttribute="width" constant="8" id="yZC-4Q-MEl"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" contentMode="left" misplaced="YES" text="4 Maart 2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Qm-d64">
+                                    <label opaque="NO" contentMode="left" text="4 Maart 2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbx-Qm-d64">
                                         <rect key="frame" x="110" y="0.0" width="454.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="eSG-SA-gSj"/>
@@ -367,7 +367,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GTU-Fn-oA1" id="L0t-QJ-hwY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -583,17 +583,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zca-0l-V5a">
-                                <rect key="frame" x="45" y="86" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hoofd" translatesAutoresizingMaskIntoConstraints="NO" id="gCA-xh-WLk">
+                                <rect key="frame" x="251" y="220" width="178" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="232.5" id="CWT-zS-R86"/>
+                                    <constraint firstAttribute="width" constant="178" id="Wp2-Vb-frj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="nu3-r7-015" userLabel="balloon">
+                                <rect key="frame" x="150" y="120" width="204" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="EvS-7d-Imv"/>
+                                    <constraint firstAttribute="height" constant="118" id="Kjn-fq-W9z"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1647058824" green="0.48627450979999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nu3-r7-015" firstAttribute="centerY" secondItem="PUs-9j-56A" secondAttribute="centerY" constant="-121" id="XrX-7i-c9b"/>
+                            <constraint firstItem="gCA-xh-WLk" firstAttribute="centerY" secondItem="PUs-9j-56A" secondAttribute="centerY" constant="36.5" id="oyX-zv-pGG"/>
+                            <constraint firstItem="gCA-xh-WLk" firstAttribute="centerX" secondItem="PUs-9j-56A" secondAttribute="centerX" constant="40" id="xDd-zV-XdN"/>
+                            <constraint firstItem="nu3-r7-015" firstAttribute="centerX" secondItem="PUs-9j-56A" secondAttribute="centerX" constant="-48" id="zEp-7f-T0V"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="balloon" destination="nu3-r7-015" id="P3b-c8-tF9"/>
+                        <outlet property="balloonHorizontalConstraint" destination="zEp-7f-T0V" id="egf-yM-NBV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWZ-xT-uir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -603,10 +621,12 @@
     <resources>
         <image name="addButton" width="22" height="22"/>
         <image name="backButton" width="21" height="17"/>
+        <image name="balloon" width="241" height="141"/>
         <image name="checkArrow" width="22" height="17"/>
         <image name="disclosure-arrow" width="8" height="13"/>
         <image name="editButton" width="21" height="21"/>
         <image name="fotosIcon" width="25" height="25"/>
+        <image name="hoofd" width="209" height="273"/>
         <image name="logboekIcon" width="25" height="18"/>
         <image name="pink-circle" width="12" height="12"/>
         <image name="settingsIcon" width="25" height="25"/>

@@ -11,10 +11,25 @@ import AVFoundation
 
 class Saaaa: UIViewController {
     var audioPlayer = AVAudioPlayer()
-    
+    let viewDuration: Double = 3.5
+    @IBOutlet var balloon: UIImageView!
+    @IBOutlet var balloonHorizontalConstraint: NSLayoutConstraint!
+
     override func viewDidLoad() {
         navigationController?.navigationBarHidden = true
         playSaaaSound()
+        
+        NSTimer.scheduledTimerWithTimeInterval(0.04, target: self, selector: "animateBalloon", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(viewDuration, target: self, selector: "discardScreen", userInfo: nil, repeats: false)
+    }
+    
+    func animateBalloon() {
+        switch balloonHorizontalConstraint.constant {
+        case -46:
+            balloonHorizontalConstraint.constant = -50
+        default:
+            balloonHorizontalConstraint.constant = -46
+        }
     }
     
     func playSaaaSound() -> Void {
@@ -24,7 +39,6 @@ class Saaaa: UIViewController {
             try audioPlayer = AVAudioPlayer(contentsOfURL: audioSample)
             audioPlayer.prepareToPlay()
             audioPlayer.play()
-            NSTimer.scheduledTimerWithTimeInterval(audioPlayer.duration + 1.5, target: self, selector: "discardScreen", userInfo: nil, repeats: false)
         } catch {
             print("error")
         }
@@ -32,8 +46,8 @@ class Saaaa: UIViewController {
     
     func discardScreen() {
         NSNotificationCenter.defaultCenter().postNotificationName("changeTabBarIndex", object: nil)
-        
-        navigationController?.popViewControllerAnimated(true)
         navigationController?.navigationBarHidden = false
+        navigationController?.popViewControllerAnimated(true)
+
     }
 }
