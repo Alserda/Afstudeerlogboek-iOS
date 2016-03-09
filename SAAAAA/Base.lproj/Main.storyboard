@@ -54,7 +54,7 @@
         <!--SAAA-->
         <scene sceneID="lux-dj-oHj">
             <objects>
-                <tableViewController id="5K9-en-L1L" customClass="LogbookViewController" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LogbookViewController" id="5K9-en-L1L" customClass="LogbookViewController" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="e29-Om-rVS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -570,6 +570,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f59-FV-0WO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="42" y="-357"/>
+        </scene>
+        <!--Saaaa-->
+        <scene sceneID="xeg-bY-H6L">
+            <objects>
+                <viewController storyboardIdentifier="Saaaa" id="8a2-7X-S1u" customClass="Saaaa" customModule="SAAAAA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zKJ-bp-hii"/>
+                        <viewControllerLayoutGuide type="bottom" id="6nV-b1-ezg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PUs-9j-56A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zca-0l-V5a">
+                                <rect key="frame" x="45" y="86" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1647058824" green="0.48627450979999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWZ-xT-uir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="377"/>
         </scene>
     </scenes>
     <resources>

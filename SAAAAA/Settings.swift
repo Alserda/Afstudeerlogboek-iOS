@@ -21,6 +21,12 @@ class Settings: UIViewController, UITextFieldDelegate {
         if let authorName = UserDefaults.retrieveAuthorName() {
             textField.text = authorName
         }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeTabBarIndex:", name: "changeTabBarIndex", object: nil)
+    }
+    
+    func changeTabBarIndex(notification: NSNotification) {
+        tabBarController?.selectedIndex = 0
     }
 
     @IBAction func saveButtonPressed(sender: AnyObject) {
@@ -33,8 +39,17 @@ class Settings: UIViewController, UITextFieldDelegate {
     }
     
     func storeAuthor() {
+        textField.resignFirstResponder()
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(textField.text!, forKey: "authorName")
-        tabBarController?.selectedIndex = 0
+
+        let SaaaaView = storyboard?.instantiateViewControllerWithIdentifier("Saaaa")
+        SaaaaView?.hidesBottomBarWhenPushed = true
+        SaaaaView?.navigationController?.navigationBarHidden = true
+        navigationController?.pushViewController(SaaaaView!, animated: false)
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        textField.resignFirstResponder()
     }
 }

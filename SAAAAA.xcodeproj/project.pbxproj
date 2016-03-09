@@ -14,6 +14,8 @@
 		A81748471C8C7B4600F231EF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81748461C8C7B4600F231EF /* UIViewController.swift */; };
 		A83859F31C8F7FD400F3D5F4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83859F21C8F7FD400F3D5F4 /* String.swift */; };
 		A83859F91C90293900F3D5F4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83859F81C90293900F3D5F4 /* Settings.swift */; };
+		A83859FB1C9039F000F3D5F4 /* Saaaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83859FA1C9039F000F3D5F4 /* Saaaa.swift */; };
+		A83859FE1C9040BE00F3D5F4 /* saaaa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A83859FD1C9040BE00F3D5F4 /* saaaa.mp3 */; };
 		A87545AF1C8B0D20000ED78A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545AE1C8B0D20000ED78A /* UIColor.swift */; };
 		A87545B21C8B0DDE000ED78A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B11C8B0DDE000ED78A /* Colors.swift */; };
 		A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87545B31C8B9E17000ED78A /* NSDate.swift */; };
@@ -23,7 +25,6 @@
 		A8F4F8E21C89B07C00CB4723 /* LogbookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8E11C89B07C00CB4723 /* LogbookView.swift */; };
 		A8F4F8E51C89B07C00CB4723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8E31C89B07C00CB4723 /* Main.storyboard */; };
 		A8F4F8E71C89B07C00CB4723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8E61C89B07C00CB4723 /* Assets.xcassets */; };
-		A8F4F8EA1C89B07C00CB4723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8E81C89B07C00CB4723 /* LaunchScreen.storyboard */; };
 		A8F4F8F21C89B12C00CB4723 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8F11C89B12C00CB4723 /* AlbumView.swift */; };
 		A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */; };
 		A8F4F8FB1C89C16200CB4723 /* PT_Sans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8F4F8F91C89BEAF00CB4723 /* PT_Sans-Bold.ttf */; };
@@ -40,6 +41,8 @@
 		A81748461C8C7B4600F231EF /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = Extentions/UIViewController.swift; sourceTree = "<group>"; };
 		A83859F21C8F7FD400F3D5F4 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A83859F81C90293900F3D5F4 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A83859FA1C9039F000F3D5F4 /* Saaaa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Saaaa.swift; sourceTree = "<group>"; };
+		A83859FD1C9040BE00F3D5F4 /* saaaa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = saaaa.mp3; sourceTree = "<group>"; };
 		A87545AE1C8B0D20000ED78A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Extentions/UIColor.swift; sourceTree = "<group>"; };
 		A87545B11C8B0DDE000ED78A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Models/Colors.swift; sourceTree = "<group>"; };
 		A87545B31C8B9E17000ED78A /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDate.swift; path = Extentions/NSDate.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		A8F4F8E11C89B07C00CB4723 /* LogbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookView.swift; sourceTree = "<group>"; };
 		A8F4F8E41C89B07C00CB4723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8F4F8E61C89B07C00CB4723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
-		A8F4F8E91C89B07C00CB4723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8F4F8EB1C89B07C00CB4723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8F4F8F11C89B12C00CB4723 /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 				7F668C831A0F3509B54152DC /* Pods-SAAAAA.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A83859FC1C9040AC00F3D5F4 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A83859FD1C9040BE00F3D5F4 /* saaaa.mp3 */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 		A87545AD1C8B0D00000ED78A /* Extentions */ = {
@@ -143,8 +153,8 @@
 				A807F4111C8D6EB400BB832A /* LogDetail.swift */,
 				A8F4F8F51C89B85E00CB4723 /* NavigationController.swift */,
 				A8F4F8E31C89B07C00CB4723 /* Main.storyboard */,
+				A83859FA1C9039F000F3D5F4 /* Saaaa.swift */,
 				A83859F81C90293900F3D5F4 /* Settings.swift */,
-				A8F4F8E81C89B07C00CB4723 /* LaunchScreen.storyboard */,
 				A8F4F8EB1C89B07C00CB4723 /* Info.plist */,
 			);
 			path = SAAAAA;
@@ -154,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F4F8E61C89B07C00CB4723 /* Assets.xcassets */,
+				A83859FC1C9040AC00F3D5F4 /* Audio */,
 				A8F4F8F81C89BE6E00CB4723 /* Fonts */,
 			);
 			name = Resources;
@@ -239,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F4F8FC1C89C16500CB4723 /* PT_Sans-Regular.ttf in Resources */,
-				A8F4F8EA1C89B07C00CB4723 /* LaunchScreen.storyboard in Resources */,
+				A83859FE1C9040BE00F3D5F4 /* saaaa.mp3 in Resources */,
 				A8F4F8E71C89B07C00CB4723 /* Assets.xcassets in Resources */,
 				A8F4F8FB1C89C16200CB4723 /* PT_Sans-Bold.ttf in Resources */,
 				A8F4F8E51C89B07C00CB4723 /* Main.storyboard in Resources */,
@@ -309,6 +320,7 @@
 				A81748471C8C7B4600F231EF /* UIViewController.swift in Sources */,
 				A8AB8F0A1C8F49FB00DABB37 /* BackendConnection.swift in Sources */,
 				A8F4F8F61C89B85E00CB4723 /* NavigationController.swift in Sources */,
+				A83859FB1C9039F000F3D5F4 /* Saaaa.swift in Sources */,
 				A8F4F8E21C89B07C00CB4723 /* LogbookView.swift in Sources */,
 				A87545B41C8B9E17000ED78A /* NSDate.swift in Sources */,
 				A83859F91C90293900F3D5F4 /* Settings.swift in Sources */,
@@ -329,14 +341,6 @@
 				A8F4F8E41C89B07C00CB4723 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A8F4F8E81C89B07C00CB4723 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8F4F8E91C89B07C00CB4723 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -430,6 +434,7 @@
 			baseConfigurationReference = 4E72A40883D26360480A2848 /* Pods-SAAAAA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SAAAAA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -443,6 +448,7 @@
 			baseConfigurationReference = 7F668C831A0F3509B54152DC /* Pods-SAAAAA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SAAAAA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
