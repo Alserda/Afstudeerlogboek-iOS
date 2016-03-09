@@ -70,3 +70,16 @@ class StorageManager {
         }
     }
 }
+
+
+struct UserDefaults {
+    static func retrieveAuthorName() -> String? {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let name = defaults.stringForKey("authorName")
+        {
+            return name
+        }
+        
+        return nil
+    }
+}
