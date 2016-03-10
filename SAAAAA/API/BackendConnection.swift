@@ -11,7 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 enum Router: URLRequestConvertible {
-    static let baseURLString = "http://localhost:3000"
+//    static let baseURLString = "http://localhost:3000"
+    static let baseURLString = "http://ancient-tundra-37609.herokuapp.com"
     static var OAuthToken: String?
     
     case FetchLogposts
@@ -56,12 +57,12 @@ enum Router: URLRequestConvertible {
 class BackendConnection {
     static let sharedInstance = BackendConnection()
     
-    func createLogpost(date date: String, body: String, success: (response: JSON) -> (), failed: (error: NSError) -> ()) -> Void {
+    func createLogpost(date date: String, body: String, author: String, success: (response: JSON) -> (), failed: (error: NSError) -> ()) -> Void {
         let parameters = [
             "post": [
                 "date": date,
                 "body": body,
-                "author": "Peter"
+                "author": author
                 
             ]
         ]

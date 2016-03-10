@@ -146,11 +146,20 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func saveButtonPressed(sender: AnyObject) {
-        backendConnection.createLogpost(date: String(datePicker.date), body: textField.text, success: { (response) -> () in
-            self.storeCreatedPost(post: response)
+        if let authorName = UserDefaults.retrieveAuthorName() {
+            backendConnection.createLogpost(date: String(datePicker.date), body: textField.text, author: authorName, success: { (response) -> () in
+                self.storeCreatedPost(post: response)
             }) { (error) -> () in
                 print(error)
+            }
+        } else {
+            showMessageWithInput(title: "Auteur", message: "Hoe heet jij?", textFieldPlaceholder: "Paul McCartney", confirmTitle: "OK", declineTitle: "Cancel", viewController: self)
         }
+    }
+    
+    func nameFormSubmitted(name name: String) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(name, forKey: "authorName")
     }
     
     func storeCreatedPost(post postJSON: JSON) {
