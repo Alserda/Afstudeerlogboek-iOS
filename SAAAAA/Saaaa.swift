@@ -11,7 +11,7 @@ import AVFoundation
 
 class Saaaa: UIViewController {
     var audioPlayer = AVAudioPlayer()
-    let viewDuration: Double = 3.5
+    let viewDuration: Double = 2.4
     @IBOutlet var balloon: UIImageView!
     @IBOutlet var balloonHorizontalConstraint: NSLayoutConstraint!
 
