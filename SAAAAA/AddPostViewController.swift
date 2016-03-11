@@ -153,7 +153,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
                 print(error)
             }
         } else {
-            showMessageWithInput(title: "Auteur", message: "Hoe heet jij?", textFieldPlaceholder: "Paul McCartney", confirmTitle: "OK", declineTitle: "Cancel", viewController: self)
+            showMessageWithInput(title: "Hoe heet jij?", message: "Vul je naam in, en verstuur het formulier nogmaals.", textFieldPlaceholder: "Paul McCartney", confirmTitle: "OK", declineTitle: "Cancel", viewController: self)
         }
     }
     
@@ -164,7 +164,9 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     
     func storeCreatedPost(post postJSON: JSON) {
         storageManager.storePost(with: postJSON) { (success) -> () in
-            self.navigationController?.popViewControllerAnimated(true)
+            let SaaaaView = self.storyboard?.instantiateViewControllerWithIdentifier("Saaaa")
+            SaaaaView?.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(SaaaaView!, animated: false)
         }
     }
 }

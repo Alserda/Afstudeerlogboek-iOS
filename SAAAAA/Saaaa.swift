@@ -17,10 +17,13 @@ class Saaaa: UIViewController {
 
     override func viewDidLoad() {
         navigationController?.navigationBarHidden = true
+
         playSaaaSound()
         
-        NSTimer.scheduledTimerWithTimeInterval(0.04, target: self, selector: "animateBalloon", userInfo: nil, repeats: true)
         NSTimer.scheduledTimerWithTimeInterval(viewDuration, target: self, selector: "discardScreen", userInfo: nil, repeats: false)
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
+            NSTimer.scheduledTimerWithTimeInterval(0.04, target: self, selector: "animateBalloon", userInfo: nil, repeats: true)
+        }
     }
     
     func animateBalloon() {
@@ -45,9 +48,8 @@ class Saaaa: UIViewController {
     }
     
     func discardScreen() {
-        NSNotificationCenter.defaultCenter().postNotificationName("changeTabBarIndex", object: nil)
         navigationController?.navigationBarHidden = false
-        navigationController?.popViewControllerAnimated(true)
-
+        tabBarController?.selectedIndex = 0
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 }
